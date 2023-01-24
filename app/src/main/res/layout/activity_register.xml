@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_islamic_pattern"
+        tools:context=".activities.RegisterActivity"
+        android:paddingBottom="@dimen/_16sdp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button3"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_green_button"
+            android:fontFamily="@font/cairo_bold"
+            android:text="@string/register"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_11sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checkBox3" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/cairo_bold"
+            android:text="@string/terms_and_conditions"
+            android:textColor="@color/darker_green_color"
+            app:layout_constraintBottom_toBottomOf="@+id/checkBox3"
+            app:layout_constraintStart_toEndOf="@+id/checkBox3"
+            app:layout_constraintTop_toTopOf="@+id/checkBox3" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_70sdp"
+            android:fontFamily="@font/cairo_bold"
+            android:text="@string/register_in_hafez"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_18ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:fontFamily="@font/cairo_bold"
+            android:gravity="center_horizontal"
+            android:text="@string/please_enter_all_info"
+            android:textColor="@color/sub_text_color"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_37sdp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/bg_edit_text_regular"
+            android:drawableStart="@drawable/ic_person"
+            android:drawablePadding="@dimen/_9sdp"
+            android:ems="10"
+            android:fontFamily="@font/cairo_medium"
+            android:hint="@string/first_name"
+            android:inputType="textPersonName"
+            android:paddingStart="@dimen/_12sdp"
+            android:paddingEnd="@dimen/_9sdp"
+            android:textColorHint="@color/sub_text_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName5"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_37sdp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/bg_edit_text_regular"
+            android:drawableStart="@drawable/ic_email"
+            android:drawablePadding="@dimen/_9sdp"
+            android:ems="10"
+            android:fontFamily="@font/cairo_medium"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:paddingStart="@dimen/_12sdp"
+            android:paddingEnd="@dimen/_9sdp"
+            android:textColorHint="@color/sub_text_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName6"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_37sdp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="@dimen/_9sdp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/bg_edit_text_regular"
+            android:drawableStart="@drawable/ic_password"
+            android:drawablePadding="@dimen/_9sdp"
+            android:ems="10"
+            android:fontFamily="@font/cairo_medium"
+            android:hint="@string/password"
+            android:inputType="textEmailAddress"
+            android:paddingStart="@dimen/_12sdp"
+            android:paddingEnd="@dimen/_9sdp"
+            android:textColorHint="@color/sub_text_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName5"
+            app:passwordToggleEnabled="true" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName7"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_37sdp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="@dimen/_9sdp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/bg_edit_text_regular"
+            android:drawableStart="@drawable/ic_password"
+            android:drawablePadding="@dimen/_9sdp"
+            android:ems="10"
+            android:fontFamily="@font/cairo_medium"
+            android:hint="@string/confirm_password"
+            android:inputType="textEmailAddress"
+            android:paddingStart="@dimen/_12sdp"
+            android:paddingEnd="@dimen/_9sdp"
+            android:textColorHint="@color/sub_text_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName6" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName3"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_37sdp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="@dimen/_9sdp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/bg_edit_text_regular"
+            android:drawableEnd="@drawable/ic_bottom_arrow"
+            android:drawablePadding="@dimen/_9sdp"
+            android:ems="10"
+            android:fontFamily="@font/cairo_medium"
+            android:hint="@string/age_rate"
+            android:inputType="textPersonName"
+            android:paddingStart="@dimen/_12sdp"
+            android:paddingEnd="@dimen/_14sdp"
+            android:textColorHint="@color/sub_text_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName4"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_37sdp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="@dimen/_9sdp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/bg_edit_text_regular"
+            android:drawableStart="@drawable/ic_world"
+            android:drawableEnd="@drawable/ic_bottom_arrow"
+            android:drawablePadding="@dimen/_9sdp"
+            android:ems="10"
+            android:fontFamily="@font/cairo_medium"
+            android:hint="@string/learning_language"
+            android:inputType="textPersonName"
+            android:paddingStart="@dimen/_12sdp"
+            android:paddingEnd="@dimen/_14sdp"
+            android:textColorHint="@color/sub_text_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName3" />
+
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:button="@drawable/custom_checkbox"
+            android:checked="true"
+            android:drawablePadding="@dimen/_12sdp"
+            android:fontFamily="@font/cairo_bold"
+            android:paddingStart="@dimen/_12sdp"
+            android:text="@string/male"
+            android:textColor="@color/gray_border_color"
+            app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName4"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName4" />
+
+        <CheckBox
+            android:id="@+id/checkBox2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:button="@drawable/custom_checkbox"
+            android:checked="false"
+            android:drawablePadding="@dimen/_12sdp"
+            android:fontFamily="@font/cairo_bold"
+            android:paddingStart="@dimen/_12sdp"
+            android:text="@string/female"
+            android:textColor="@color/gray_border_color"
+            app:layout_constraintStart_toEndOf="@+id/checkBox"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName4" />
+
+        <CheckBox
+            android:id="@+id/checkBox3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:text="@string/accept_on"
+            app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName7"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName7" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
