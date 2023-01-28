@@ -13,7 +13,7 @@
         android:paddingBottom="@dimen/_16sdp">
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/button3"
+            android:id="@+id/btnRegister"
             android:layout_width="0dp"
             android:layout_height="@dimen/_45sdp"
             android:layout_marginHorizontal="@dimen/_12sdp"

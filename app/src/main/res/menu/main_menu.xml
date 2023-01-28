@@ -4,6 +4,7 @@
 
     <item android:title="@string/home" android:id="@+id/navHome" android:icon="@drawable/ic_main_home" />
     <item android:title="@string/teachers" android:id="@+id/navTeachers" android:icon="@drawable/ic_main_teachers" />
-    <item android:title="@string/quraan" android:id="@+id/navQuraan" android:icon="@drawable/ic_quraan" />
+    <item android:title="@string/plans" android:id="@+id/navPlans" android:icon="@drawable/ic_plans" />
+    <item android:title="@string/sessions" android:id="@+id/navSessions" android:icon="@drawable/ic_sessions" />
     <item android:title="@string/account" android:id="@+id/navAccount" android:icon="@drawable/ic_main_account" />
 </menu>

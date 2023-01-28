@@ -19,11 +19,34 @@ class MainActivity : AppCompatActivity() {
         val myBottomNavigationAdapter = MyBottomNavigationAdapter(this@MainActivity)
         activityMainBinding.vp.adapter = myBottomNavigationAdapter
 
+        activityMainBinding.bnv.setOnItemSelectedListener {
+            when(it.itemId){
+                R.id.navHome->{
+                    activityMainBinding.vp.currentItem = 0
+                }
+                R.id.navTeachers->{
+                    activityMainBinding.vp.currentItem = 1
+                }
+                R.id.navPlans->{
+                    activityMainBinding.vp.currentItem = 2
+                }
+                R.id.navSessions->{
+                    activityMainBinding.vp.currentItem = 4
+                }
+                R.id.navAccount->{
+                    activityMainBinding.vp.currentItem = 5
+                }
+
+            }
+
+            true
+
+        }
     }
 
     class MyBottomNavigationAdapter(var fragmentActivity: FragmentActivity):FragmentStateAdapter(fragmentActivity){
         override fun getItemCount(): Int =
-            4
+            5
 
         override fun createFragment(position: Int): Fragment {
             return  if(position == 0){

@@ -60,5 +60,21 @@
     <string name="rate">التقييم</string>
     <string name="status">الحالة</string>
     <string name="show_results">إعرض النتائج</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="change_password">تغيير كلمة المرور</string>
+    <string name="new_password">كلمة المرور الجديدة</string>
+    <string name="confirm_new_password">تأكيد كلمة المرور</string>
+    <string name="please_check_the_confirm">الرجاء التحقق من توافق كلمة المرور</string>
+    <string name="test_name_account">عبدالله صالح</string>
+    <string name="sessions">الدروس</string>
+    <string name="add_account">إضافة حساب</string>
+    <string name="change_account">تغيير الحساب</string>
+    <string name="profile_informations">معلومات الحساب</string>
+    <string name="Language">اللغة</string>
+    <string name="push_notifications">تفعيل الاشعارات</string>
+    <string name="plans_and_reports">الخطط و التقارير</string>
+    <string name="statistics">الإحصائيات</string>
+    <string name="financial_account_statement">كشف الحساب المالي</string>
+    <string name="customer_services">خدمة العملاء</string>
+    <string name="logout">تسجيل الخروج</string>
+
 </resources>
