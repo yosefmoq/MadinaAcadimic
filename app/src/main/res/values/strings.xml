@@ -76,6 +76,38 @@
     <string name="financial_account_statement">Financial Account Statement</string>
     <string name="customer_services">Customer Services</string>
     <string name="logout">Log out</string>
+    <string name="sign_in_with_exist">Login with an existing account</string>
+    <string name="create_new_account">Create a new account</string>
 
+    <string name="abdullah">Abdullah Saleh</string>
+
+    <string name="all_information">All Informations</string>
+    <string name="edit">Edit</string>
+    <string name="prefered_rewaya">Preferred Riwayah</string>
+    <string name="organization">Organization</string>
+    <string name="confirm_changes">Confirm Changes</string>
+    <string name="confirm">Confirm</string>
+    <string name="cancel">Cancel</string>
+    <string name="lastname">Last Name</string>
+    <string name="sex">Sex:</string>
+    <string name="confirm_edits">Confirm Changes</string>
+    <string name="are_you_sure_changes">Are you sure to change Profile\nInformations ?</string>
+    <string name="no_plans_yet">You have no plans yet</string>
+    <string name="start_plan_now">Start a plan Now</string>
+    <string name="current_plans">Current Plans</string>
+    <string name="completed_plans">Completed Plans</string>
+    <string name="amount">Amount</string>
+    <string name="mention">Mention</string>
+    <string name="time_period">Time Period</string>
+    <string name="Grade">grade</string>
+    <string name="up_to_plan">Up to plan</string>
+    <string name="three_days_behind">3 days behind</string>
+    <string name="add_new_plan">Add New Plan</string>
+    <string name="plan_name">Surah Al-Fatiha</string>
+    <string name="completed">Done</string>
+    <string name="half_page">Half page</string>
+    <string name="one_month">One month</string>
+    <string name="very_good">Very Good !</string>
+    <string name="of_hundred">of 100</string>
 
 </resources>

@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
+import antonkozyriatskyi.circularprogressindicator.CircularProgressIndicator
 import com.madinaAcadimic.app.R
 
 class SimpleAdapter(var id:Int,var itemCountA:Int = 10,var onItemClickListener:OnItemClickListener=  object :OnItemClickListener{
@@ -30,6 +31,14 @@ class SimpleAdapter(var id:Int,var itemCountA:Int = 10,var onItemClickListener:O
             }else{
                 textView.background = ContextCompat.getDrawable(holder.view.context,R.drawable.bg_text_gray)
             }
+        }
+
+        try {
+            val progress = holder.view.findViewById<CircularProgressIndicator>(R.id.cpBalance)
+            progress.maxProgress = 100.0
+            progress.setCurrentProgress(15.0)
+        }catch (e:java.lang.Exception){
+
         }
         holder.view.setOnClickListener {
             onItemClickListener.onItemClick(position)

@@ -157,6 +157,7 @@
             android:layout_height="@dimen/_37sdp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="@dimen/_9sdp"
+            android:drawableStart="@drawable/ic_age_category"
             android:layout_marginEnd="16dp"
             android:background="@drawable/bg_edit_text_regular"
             android:drawableEnd="@drawable/ic_bottom_arrow"

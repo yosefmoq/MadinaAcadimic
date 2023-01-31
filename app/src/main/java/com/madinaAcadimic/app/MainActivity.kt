@@ -6,7 +6,9 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.madinaAcadimic.app.databinding.ActivityMainBinding
+import com.madinaAcadimic.app.fragments.AccountFragment
 import com.madinaAcadimic.app.fragments.MainFragment
+import com.madinaAcadimic.app.fragments.PlansFragment
 import com.madinaAcadimic.app.fragments.TeachersFragment
 
 class MainActivity : AppCompatActivity() {
@@ -51,8 +53,12 @@ class MainActivity : AppCompatActivity() {
         override fun createFragment(position: Int): Fragment {
             return  if(position == 0){
                 MainFragment()
-            }else{
+            }else if(position ==1) {
                 TeachersFragment()
+            }else if(position == 2){
+                PlansFragment()
+            }else{
+                AccountFragment()
             }
         }
 

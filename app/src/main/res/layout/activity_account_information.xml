@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_islamic_pattern">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:background="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvChangePassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:drawablePadding="@dimen/_12sdp"
+        android:fontFamily="@font/cairo_bold"
+        android:text="@string/profile_informations"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14ssp"
+        app:drawableStartCompat="@drawable/ic_left_arrow"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/view" />
+
+    <TextView
+        android:id="@+id/textView57"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_21sdp"
+        android:layout_marginTop="1dp"
+        android:fontFamily="@font/cairo_bold"
+        android:text="@string/all_information"
+        android:textColor="@color/sub_text_color"
+        android:textSize="@dimen/_9ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+    <TextView
+        android:id="@+id/textView63"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:drawableStart="@drawable/ic_edit_green"
+        android:drawablePadding="@dimen/_4sdp"
+        android:fontFamily="@font/cairo_bold"
+        android:text="@string/edit"
+        android:textColor="@color/primary_color"
+        android:textSize="@dimen/_10ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView57" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textView57"
+        app:layout_constraintTop_toBottomOf="@+id/textView57">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textView64"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:fontFamily="@font/cairo_bold"
+                android:text="@string/first_name"
+
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/editTextTextPersonName11"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_37sdp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:background="@drawable/bg_edit_text_regular"
+                android:drawableStart="@drawable/ic_person"
+                android:drawablePadding="@dimen/_9sdp"
+                android:ems="10"
+                android:fontFamily="@font/cairo_medium"
+                android:hint="@string/first_name"
+                android:inputType="textPersonName"
+                android:paddingStart="@dimen/_12sdp"
+                android:paddingEnd="@dimen/_9sdp"
+                android:textColorHint="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView64"
+                app:layout_constraintTop_toBottomOf="@+id/textView64" />
+
+            <TextView
+                android:id="@+id/textView65"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:fontFamily="@font/cairo_bold"
+                android:text="@string/lastname"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@+id/textView64"
+                app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName11" />
+
+            <EditText
+                android:id="@+id/editTextTextPersonName12"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_37sdp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:background="@drawable/bg_edit_text_regular"
+                android:drawableStart="@drawable/ic_person"
+                android:drawablePadding="@dimen/_9sdp"
+                android:ems="10"
+                android:fontFamily="@font/cairo_medium"
+                android:hint="@string/lastname"
+                android:inputType="textPersonName"
+                android:paddingStart="@dimen/_12sdp"
+                android:paddingEnd="@dimen/_9sdp"
+                android:textColorHint="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView64"
+                app:layout_constraintTop_toBottomOf="@+id/textView65" />
+
+            <TextView
+                android:id="@+id/textView66"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/cairo_bold"
+                android:text="@string/lastname"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@+id/textView65"
+                app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName12" />
+
+            <TextView
+                android:id="@+id/textView67"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/cairo_bold"
+                android:text="@string/sex"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@+id/textView66"
+                app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName13" />
+
+            <TextView
+                android:id="@+id/textView68"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/cairo_bold"
+                android:text="@string/male"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toEndOf="@+id/textView67"
+                app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName13" />
+
+            <EditText
+                android:id="@+id/editTextTextPersonName13"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_37sdp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/bg_edit_text_regular"
+                android:drawableStart="@drawable/ic_age_category"
+                android:drawablePadding="@dimen/_9sdp"
+                android:ems="10"
+                android:fontFamily="@font/cairo_medium"
+                android:hint="@string/age_rate"
+                android:inputType="textPersonName"
+                android:paddingStart="@dimen/_12sdp"
+                android:paddingEnd="@dimen/_14sdp"
+                android:textColorHint="@color/black"
+                app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName12"
+                app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName12"
+                app:layout_constraintTop_toBottomOf="@+id/textView66" />
+
+            <TextView
+                android:id="@+id/textView69"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/cairo_bold"
+                android:text="@string/learning_language"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@+id/textView67"
+                app:layout_constraintTop_toBottomOf="@+id/textView67" />
+
+            <EditText
+                android:id="@+id/editTextTextPersonName15"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_37sdp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/bg_edit_text_regular"
+                android:drawableStart="@drawable/ic_world"
+                android:drawablePadding="@dimen/_9sdp"
+                android:ems="10"
+                android:fontFamily="@font/cairo_medium"
+                android:hint="@string/learning_language"
+                android:inputType="textPersonName"
+                android:paddingStart="@dimen/_12sdp"
+                android:paddingEnd="@dimen/_14sdp"
+                android:textColorHint="@color/black"
+                app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName13"
+                app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName13"
+                app:layout_constraintTop_toBottomOf="@+id/textView69" />
+
+            <TextView
+                android:id="@+id/textView70"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/cairo_bold"
+                android:text="@string/prefered_rewaya"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@+id/textView69"
+                app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName15" />
+
+            <TextView
+                android:id="@+id/textView71"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/cairo_bold"
+                android:text="@string/organization"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@+id/textView70"
+                app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName16" />
+
+            <TextView
+                android:id="@+id/textView72"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/cairo_bold"
+                android:text="@string/email"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@+id/textView71"
+                app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName17" />
+
+            <EditText
+                android:id="@+id/editTextTextPersonName17"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_37sdp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/bg_edit_text_regular"
+                android:drawablePadding="@dimen/_9sdp"
+                android:ems="10"
+                android:fontFamily="@font/cairo_medium"
+                android:hint="@string/organization"
+                android:inputType="textPersonName"
+                android:paddingStart="@dimen/_12sdp"
+                android:paddingEnd="@dimen/_14sdp"
+                android:textColorHint="@color/black"
+                app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName13"
+                app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName13"
+                app:layout_constraintTop_toBottomOf="@+id/textView71" />
+
+            <EditText
+                android:id="@+id/editTextTextPersonName18"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_37sdp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/bg_edit_text_regular"
+                android:drawableStart="@drawable/ic_email"
+                android:drawablePadding="@dimen/_9sdp"
+                android:ems="10"
+                android:fontFamily="@font/cairo_medium"
+                android:hint="@string/email"
+                android:inputType="textPersonName"
+                android:paddingStart="@dimen/_12sdp"
+                android:paddingEnd="@dimen/_14sdp"
+                android:textColorHint="@color/black"
+                app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName13"
+                app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName13"
+                app:layout_constraintTop_toBottomOf="@+id/textView72" />
+
+            <EditText
+                android:id="@+id/editTextTextPersonName16"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_37sdp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_edit_text_regular"
+                android:drawableStart="@drawable/ic_quraan"
+                android:drawablePadding="@dimen/_9sdp"
+                android:ems="10"
+                android:fontFamily="@font/cairo_medium"
+                android:hint="@string/prefered_rewaya"
+                android:inputType="textPersonName"
+                android:paddingStart="@dimen/_12sdp"
+                android:paddingEnd="@dimen/_14sdp"
+                android:textColorHint="@color/black"
+                app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName13"
+                app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName13"
+                app:layout_constraintTop_toBottomOf="@+id/textView70" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:background="@drawable/bg_green_button"
+                android:fontFamily="@font/cairo_bold"
+                android:text="@string/confirm_changes"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName18"
+                app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName18"
+                app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName18" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

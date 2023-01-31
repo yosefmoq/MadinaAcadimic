@@ -55,7 +55,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/textView55"
+            android:id="@+id/tvAddAccount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -103,7 +103,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView14" />
 
         <TextView
-            android:id="@+id/textView57"
+            android:id="@+id/tvChangeAccount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_16sdp"
@@ -115,12 +115,12 @@
             android:text="@string/change_account"
             android:textColor="@color/white"
             app:drawableStartCompat="@drawable/ic_change_account"
-            app:layout_constraintStart_toStartOf="@+id/textView55"
-            app:layout_constraintTop_toBottomOf="@+id/textView55" />
+            app:layout_constraintEnd_toEndOf="@+id/tvAddAccount"
+            app:layout_constraintTop_toBottomOf="@+id/tvAddAccount" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
-        android:id="@+id/tvName2"
+        android:id="@+id/tvAccountInformation"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_6sdp"
@@ -210,7 +210,7 @@
         app:drawableStartCompat="@drawable/ic_change_language"
         app:layout_constraintEnd_toEndOf="@+id/divider2"
         app:layout_constraintStart_toStartOf="@+id/divider2"
-        app:layout_constraintTop_toBottomOf="@+id/tvName2" />
+        app:layout_constraintTop_toBottomOf="@+id/tvAccountInformation" />
 
     <View
         android:id="@+id/divider2"

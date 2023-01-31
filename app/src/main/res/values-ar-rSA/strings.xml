@@ -76,5 +76,37 @@
     <string name="financial_account_statement">كشف الحساب المالي</string>
     <string name="customer_services">خدمة العملاء</string>
     <string name="logout">تسجيل الخروج</string>
+    <string name="abdullah">عبدالله صالح</string>
+    <string name="sign_in_with_exist">تسجيل الدخول باستخدام حساب موجود</string>
+    <string name="create_new_account">إنشاء حساب جديد</string>
+    <string name="all_information">كل المعلومات</string>
+    <string name="edit">تعديل</string>
+    <string name="prefered_rewaya">الرواية المفضلة</string>
+    <string name="organization">المنظمة المنتمي لها</string>
+    <string name="confirm_changes">حفظ التعديلات</string>
+    <string name="confirm">متأكد</string>
+    <string name="cancel">الغاء</string>
+    <string name="lastname">الإسم الأخير</string>
+    <string name="sex">الجنس:</string>
+    <string name="confirm_edits">تأكيد التعديلات</string>
+    <string name="are_you_sure_changes">هل أنت متأكد من تعديل معلومات \nالحساب ؟</string>
+    <string name="no_plans_yet">لا يوجد خطط بعد</string>
+    <string name="start_plan_now">إبدأ خطتك الآن</string>
+    <string name="current_plans">خطط حالية</string>
+    <string name="completed_plans">خطط منتهية</string>
+    <string name="amount">المقدار</string>
+    <string name="mention">تقديرك</string>
+    <string name="time_period">الفترة الزمنية</string>
+    <string name="Grade">درجتك</string>
+    <string name="up_to_plan">حسب الخطة</string>
+    <string name="three_days_behind">متأخر 3 أيام</string>
+    <string name="add_new_plan">أضف خطة جديدة</string>
+    <string name="plan_name">أخذها بركة</string>
+    <string name="half_page">نصف وجه</string>
+    <string name="one_month">شهر واحد</string>
+    <string name="very_good">جيد جدا !</string>
+    <string name="of_hundred">من 100</string>
+    <string name="completed">أتممت</string>
+
 
 </resources>
