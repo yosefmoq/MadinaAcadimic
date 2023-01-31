@@ -108,5 +108,27 @@
     <string name="of_hundred">من 100</string>
     <string name="completed">أتممت</string>
 
+    <string name="naxt">التالي</string>
+    <string name="choose_programm">إختر البرنامج </string>
+    <string name="search_programm">إبحث عن برنامح,,</string>
+    <string name="save_plan">Save Plan</string>
+    <string name="surat_albaqarah">أخـذها بركة</string>
+    <string name="surat_albaqarah_details">مسار لحفظ و إتقان سورة البقرة بخطة مدروسة و متماشية مع جميع المستويات</string>
+
+    <string name="memorizaton_path">مسار الحفظ</string>
+    <string name="memorizaton_path_details">مسار الحفظ يحقق لك حفظ البرنامج المحدد كاملآ عبر تسميع الحفظ يوميآ</string>
+
+    <string name="quarter_page_daily">ربع وجه يوميآ</string>
+    <string name="choose_path">إختر المسار</string>
+    <string name="choose_amount">إختر المقدار</string>
+    <string name="hijri">بالهجري</string>
+    <string name="gregorian">بالميلادي</string>
+    <string name="plan_details">تفاصيل الخطة</string>
+    <string name="date">اليوم</string>
+    <string name="from_surah">من سورة</string>
+    <string name="ayah">الآية</string>
+    <string name="to_surah">إلى سورة</string>
+
+
 
 </resources>

@@ -1,5 +1,6 @@
 package com.madinaAcadimic.app.fragments
 
+import android.content.Intent
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.madinaAcadimic.app.R
+import com.madinaAcadimic.app.activities.AddPlanActivity
 import com.madinaAcadimic.app.adapters.SimpleAdapter
 import com.madinaAcadimic.app.databinding.FragmentPlansBinding
 
@@ -26,6 +28,10 @@ class PlansFragment : Fragment() {
 
         fragmentPlansBinding.rvPlans.adapter = SimpleAdapter(R.layout.item_current_plans,6)
 
+
+        fragmentPlansBinding.llAdd.setOnClickListener {
+            startActivity(Intent(requireContext(),AddPlanActivity::class.java))
+        }
 
     }
 }

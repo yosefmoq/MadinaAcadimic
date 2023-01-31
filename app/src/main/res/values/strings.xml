@@ -109,5 +109,25 @@
     <string name="one_month">One month</string>
     <string name="very_good">Very Good !</string>
     <string name="of_hundred">of 100</string>
+    <string name="naxt">Next</string>
+    <string name="choose_programm">Choose Program</string>
+    <string name="search_programm">Search program..</string>
+    <string name="save_plan">Save Plan</string>
+    <string name="surat_albaqarah">Surah Al-Baqarah</string>
+    <string name="surat_albaqarah_details">A path to memorizing and mastering Surat Al-Baqarah with a well-thought-out plan consistent with all levels</string>
 
+    <string name="memorizaton_path">Memorization Path</string>
+    <string name="memorizaton_path_details">The memorization path enables you to memorize the selected program completely by reciting the memorization daily</string>
+
+    <string name="quarter_page_daily">Quarter Page Daily</string>
+
+    <string name="choose_path">Choose Path</string>
+    <string name="choose_amount">Choose Amount</string>
+    <string name="hijri">Hijri</string>
+    <string name="gregorian">Gregorian</string>
+    <string name="plan_details">Plan Details</string>
+    <string name="date">Date</string>
+    <string name="from_surah">From Surah</string>
+    <string name="ayah">Ayah</string>
+    <string name="to_surah">To Surah</string>
 </resources>

@@ -12,7 +12,7 @@
         android:theme="@style/Theme.MadinaAcadimic"
         tools:targetApi="31">
         <activity
-            android:name=".AddPlanActivity"
+            android:name=".activities.AddPlanActivity"
             android:exported="false" />
         <activity
             android:name=".activities.TeacherDetailsActivity"
