@@ -33,6 +33,8 @@ class PlansFragment : Fragment() {
                 startActivity(Intent(requireContext(),PlanDetailsActivity::class.java))
             }
 
+            override fun onViewClicked(viewID: Int) {
+            }
         })
 
 

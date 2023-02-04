@@ -57,6 +57,7 @@
     <string name="noval">Riwayah</string>
     <string name="choose_noval">Choose the riwayah you will read with</string>
     <string name="rate">Rating</string>
+    <string name="rated">Rated</string>
     <string name="status">Availability</string>
     <string name="show_results">Show results</string>
     <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
@@ -153,4 +154,32 @@
     <string name="thank_god_nyou_read_today">Thank God !\nYou read today</string>
     <string name="_19_shawal_1444">19 Shawal 1444</string>
     <string name="may_allah_accept_you_read_this_month">May Allah Accept\n!You read this month</string>
+    <string name="no_previous_session_for_you_yet">No Previous Session for you yet</string>
+    <string name="start_now">Start Now</string>
+    <string name="length">Length</string>
+    <string name="from_cap">From</string>
+    <string name="to_cap">To</string>
+    <string name="additional_sessions">Additional\nSessions</string>
+    <string name="additional_sessions_no_split">Additional Sessions</string>
+
+
+    <string name="teacher_cap">Teacher <u><font fgcolor='#000000'>Mohamed Ali Ismail</font></u></string>
+    <string name="rate_cap">Rate</string>
+    <string name="report_cap">Report</string>
+    <string name="reported">Reported</string>
+    <string name="teacher_rating">Teacher Rating</string>
+    <string name="leave_your_feedback_here">Leave your feedback here</string>
+    <string name="send_rating">Send Rating</string>
+    <string name="report_teacher">ٌReport Teacher</string>
+    <string name="send_report">Send Report</string>
+    <string name="period_ntotal">Period\nTotal</string>
+    <string name="type">Type</string>
+    <string name="minutes_ndiscounted">Minutes\nDiscounted</string>
+    <string name="balance_nbefore">Balance\nbefore</string>
+    <string name="remaining_nminutes">Remaining\nminutes</string>
+    <string name="price">Price</string>
+    <string name="consumption">Consumption</string>
+    <string name="minutes_nrecharged">Minutes\nRecharged</string>
+    <string name="period">Period</string>
+
 </resources>

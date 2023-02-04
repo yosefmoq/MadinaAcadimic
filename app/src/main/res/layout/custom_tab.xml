@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <TextView
+        android:id="@+id/tab_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:text="asdlas dk"
+        android:fontFamily="@font/cairo_bold"
+        android:textSize="@dimen/_12ssp"
+        android:textColor="@drawable/tab_item_selector"
+        />
+
+    <View
+        android:id="@+id/viewTabDivider"
+        android:layout_width="1dp"
+        android:layout_height="@dimen/_12sdp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:background="@color/sub_text_color" />
+
+
+</RelativeLayout>

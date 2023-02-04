@@ -6,10 +6,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.madinaAcadimic.app.databinding.ActivityMainBinding
-import com.madinaAcadimic.app.fragments.AccountFragment
-import com.madinaAcadimic.app.fragments.MainFragment
-import com.madinaAcadimic.app.fragments.PlansFragment
-import com.madinaAcadimic.app.fragments.TeachersFragment
+import com.madinaAcadimic.app.fragments.*
 
 class MainActivity : AppCompatActivity() {
     lateinit var activityMainBinding:ActivityMainBinding
@@ -33,10 +30,10 @@ class MainActivity : AppCompatActivity() {
                     activityMainBinding.vp.currentItem = 2
                 }
                 R.id.navSessions->{
-                    activityMainBinding.vp.currentItem = 4
+                    activityMainBinding.vp.currentItem = 3
                 }
                 R.id.navAccount->{
-                    activityMainBinding.vp.currentItem = 5
+                    activityMainBinding.vp.currentItem = 4
                 }
 
             }
@@ -57,6 +54,8 @@ class MainActivity : AppCompatActivity() {
                 TeachersFragment()
             }else if(position == 2){
                 PlansFragment()
+            }else if(position == 3){
+                SessionsFragment()
             }else{
                 AccountFragment()
             }

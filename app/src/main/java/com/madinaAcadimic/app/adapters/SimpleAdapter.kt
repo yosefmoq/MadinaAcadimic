@@ -3,6 +3,8 @@ package com.madinaAcadimic.app.adapters
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
@@ -10,9 +12,16 @@ import antonkozyriatskyi.circularprogressindicator.CircularProgressIndicator
 import com.madinaAcadimic.app.R
 
 class SimpleAdapter(var id:Int,var itemCountA:Int = 10,var onItemClickListener:OnItemClickListener=  object :OnItemClickListener{
+
     override fun onItemClick(position: Int) {
 
     }
+
+    override fun onViewClicked(viewID: Int) {
+
+    }
+
+
 },var data:ArrayList<String> = arrayListOf()): RecyclerView.Adapter<SimpleAdapter.ViewHolder>() {
     class ViewHolder(var view: View):RecyclerView.ViewHolder(view)
 
@@ -40,6 +49,106 @@ class SimpleAdapter(var id:Int,var itemCountA:Int = 10,var onItemClickListener:O
         }catch (e:java.lang.Exception){
 
         }
+
+
+        try {
+
+            val viewDivider = holder.view.findViewById<View>(R.id.viewDivider)
+
+
+            if (position == itemCountA - 1){
+                viewDivider.visibility = View.GONE
+            }
+
+        }catch (e:java.lang.Exception){
+
+        }
+
+
+
+        try {
+
+            val llSessionExtendedDetails = holder.view.findViewById<LinearLayout>(R.id.llSessionExtendedDetails)
+            val ivDetailsArrow = holder.view.findViewById<ImageView>(R.id.ivDetailsArrow)
+            val llArrow = holder.view.findViewById<LinearLayout>(R.id.llArrow)
+            val ivRecord = holder.view.findViewById<ImageView>(R.id.ivRecord)
+
+
+            llArrow.setOnClickListener {
+
+                if(llSessionExtendedDetails.visibility == View.VISIBLE){
+
+                    llSessionExtendedDetails.visibility = View.GONE
+                    ivDetailsArrow.setImageResource(R.drawable.ic_down_arrow_session)
+
+                }else{
+                    llSessionExtendedDetails.visibility = View.VISIBLE
+                    ivDetailsArrow.setImageResource(R.drawable.ic_up_arrow_session)
+                }
+
+            }
+
+
+            val tvRate = holder.view.findViewById<TextView>(R.id.tvRate)
+            val tvReport = holder.view.findViewById<TextView>(R.id.tvReport)
+            val tvAdditionalSessions = holder.view.findViewById<TextView>(R.id.tvAdditionalSessions)
+
+
+            tvRate.setOnClickListener {
+                onItemClickListener.onViewClicked(it.id)
+            }
+            tvReport.setOnClickListener {
+                onItemClickListener.onViewClicked(it.id)
+            }
+            tvAdditionalSessions.setOnClickListener {
+                onItemClickListener.onViewClicked(it.id)
+            }
+
+            if(position == 1){
+
+                with(tvRate){
+                    setBackgroundResource(R.drawable.bg_action_done_grey_outline)
+                    setTextColor(resources.getColor(R.color.gray_border_color,null))
+                    setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
+                    setText(R.string.rated)
+                    isClickable = false
+                }
+
+                with(tvReport){
+                    setBackgroundResource(R.drawable.bg_action_done_grey_outline)
+                    setTextColor(resources.getColor(R.color.gray_border_color,null))
+                    setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
+                    setText(R.string.reported)
+                    isClickable = false
+                }
+
+
+            }else{
+
+                with(tvRate){
+                    setBackgroundResource(R.drawable.bg_rate)
+                    setTextColor(resources.getColor(R.color.yellow_color,null))
+                    setCompoundDrawablesWithIntrinsicBounds(0, 0,R.drawable.ic_rate_indicator, 0);
+                }
+
+                with(tvReport){
+                    setBackgroundResource(R.drawable.bg_report)
+                    setTextColor(resources.getColor(R.color.our_red,null))
+                    setCompoundDrawablesWithIntrinsicBounds(0, 0,R.drawable.ic_outline_report, 0);
+                }
+
+
+            }
+
+            if (position == 1 || position == 3){
+                ivRecord.setImageResource(R.drawable.ic_record_not_exist)
+            }
+
+
+        }catch (e:java.lang.Exception){
+
+        }
+
         holder.view.setOnClickListener {
             onItemClickListener.onItemClick(position)
         }
