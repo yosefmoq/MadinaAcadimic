@@ -59,5 +59,6 @@ dependencies {
     implementation 'com.github.Innovattic:range-seek-bar:v1.0.8'
     implementation 'com.google.android.flexbox:flexbox:3.0.0'
     implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+    implementation 'im.dacer:AndroidCharts:1.0.4'
 
 }

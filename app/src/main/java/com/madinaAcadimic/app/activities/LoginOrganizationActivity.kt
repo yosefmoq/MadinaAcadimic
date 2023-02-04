@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.madinaAcadimic.app.MainActivity
 import com.madinaAcadimic.app.R
+import com.madinaAcadimic.app.constants.Constants
 import com.madinaAcadimic.app.databinding.ActivityLoginOrganizationBinding
 
 class LoginOrganizationActivity : AppCompatActivity() {
@@ -15,7 +16,8 @@ class LoginOrganizationActivity : AppCompatActivity() {
         setContentView(activityLoginOrganizationBinding.root)
 
         activityLoginOrganizationBinding.btnSignIn.setOnClickListener {
-            startActivity(Intent(this@LoginOrganizationActivity,MainActivity::class.java))
+            startActivity(Intent(this@LoginOrganizationActivity,MainActivity::class.java).putExtra(
+                Constants.USER_TYPE,Constants.ORGANIZATION))
         }
         activityLoginOrganizationBinding.llBack.setOnClickListener {
             finish()

@@ -140,11 +140,44 @@
     <string name="diff">الفرق</string>
     <string name="good">متوافق</string>
     <string name="doneA">الإنجاز</string>
-    <string name="congratulations_nyou_finished_reading">Congratulations !\nYou finished reading</string>
-    <string name="ayah_a">Ayah</string>
-    <string name="thank_god_nyou_read_today">Thank God !\nYou read today</string>
+    <string name="congratulations_nyou_finished_reading">مبروك !\nلقد أتممت قراءة</string>
+    <string name="ayah_a">آية</string>
+
+    <string name="score">التقييم</string>
+    <string name="record">التقييم</string>
+    <string name="duration">المدة</string>
+
+    <string name="page">صفحة</string>
+    <string name="letter">حرف</string>
+
+    <string name="thank_god_nyou_read_today">الحمد لله\nقرآت اليوم</string>
     <string name="_19_shawal_1444">19 Shawal 1444</string>
-    <string name="may_allah_accept_you_read_this_month">May Allah Accept !You read this month</string>
+    <string name="may_allah_accept_you_read_this_month">تقبل الله\nقراءتك هذا الشهر </string>
+    <string name="great_job_nyou_read_this_year">هنيئا لك\nقراءتك هذه السنة</string>
+    <string name="notification">الإشعارات</string>
+    <string name="delete_all">حذف الجميع</string>
+    <string name="record_avalible">تسجيل الحصة متاح</string>
+    <string name="wallet">Wallet</string>
+    <string name="balance_a">Balance</string>
+    <string name="_60_minutes">60 Minutes</string>
+    <string name="vocal_sessions">Vocal sessions</string>
+    <string name="_19_halalah_per_minute">19 Halalah per minute</string>
+    <string name="minutes">Minutes</string>
+    <string name="order_details">Order Details</string>
+    <string name="balance_equals_30_minutes_video_sessions">Balance equals 30 minutes video sessions</string>
+    <string name="order_and_invoice_details">Order and invoice details</string>
+    <string name="vocal_sessions_minutes">Vocal sessions minutes</string>
+    <string name="_240">240</string>
+    <string name="price_per_minute">Price per minute</string>
+    <string name="_0_19_nrs">0.19\nRS</string>
+    <string name="total_bill">Total bill</string>
+    <string name="_200_nrs">200\nRS</string>
+    <string name="taxes">Taxes</string>
+    <string name="minutes_purchased_must_be_used_before">Minutes purchased must be used before</string>
+    <string name="_11_12_1444">11-12-1444</string>
+    <string name="_30_minutes_nvideo_sessions">30 minutes\nVideo sessions</string>
+    <string name="you_can_exchange_purchased_audio_learning_minutes_for_nvideo_learning_minutes">You can exchange purchased audio learning minutes for\nvideo learning minutes</string>
+    <string name="payment">Payment</string>
 
 
 </resources>

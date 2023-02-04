@@ -1,11 +1,13 @@
 package com.madinaAcadimic.app.fragments
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.madinaAcadimic.app.R
+import com.madinaAcadimic.app.activities.NotificationActivity
 import com.madinaAcadimic.app.adapters.OnItemClickListener
 import com.madinaAcadimic.app.adapters.SimpleAdapter
 import com.madinaAcadimic.app.databinding.FragmentMainBinding
@@ -38,6 +40,9 @@ class MainFragment : Fragment() {
             }
         })
 
+        fragmentMainBinding.ivNotification.setOnClickListener {
+            startActivity(Intent(requireContext(),NotificationActivity::class.java))
+        }
         fragmentMainBinding.rvPlans.adapter = SimpleAdapter(R.layout.item_save_plan, onItemClickListener = object :OnItemClickListener{
             override fun onItemClick(position: Int) {
 

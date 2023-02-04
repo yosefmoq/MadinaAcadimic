@@ -5,15 +5,22 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
+import com.madinaAcadimic.app.constants.Constants
 import com.madinaAcadimic.app.databinding.ActivityMainBinding
 import com.madinaAcadimic.app.fragments.*
 
 class MainActivity : AppCompatActivity() {
     lateinit var activityMainBinding:ActivityMainBinding
+    companion object{
+        var userType = Constants.USER
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         activityMainBinding = ActivityMainBinding.inflate(layoutInflater,null,false)
         setContentView(activityMainBinding.root)
+
+        userType = intent.getStringExtra(Constants.USER_TYPE)!!
+
 
         val myBottomNavigationAdapter = MyBottomNavigationAdapter(this@MainActivity)
         activityMainBinding.vp.adapter = myBottomNavigationAdapter

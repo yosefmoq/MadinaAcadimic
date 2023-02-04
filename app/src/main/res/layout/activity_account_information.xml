@@ -16,7 +16,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tvChangePassword"
+        android:id="@+id/tvAccountInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_20sdp"
@@ -31,7 +31,7 @@
         app:layout_constraintTop_toTopOf="@+id/view" />
 
     <TextView
-        android:id="@+id/textView57"
+        android:id="@+id/tvAllInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_21sdp"
@@ -44,7 +44,7 @@
         app:layout_constraintTop_toBottomOf="@+id/view" />
 
     <TextView
-        android:id="@+id/textView63"
+        android:id="@+id/tvEdit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/_20sdp"
@@ -55,19 +55,21 @@
         android:textColor="@color/primary_color"
         android:textSize="@dimen/_10ssp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView57" />
+        app:layout_constraintTop_toTopOf="@+id/tvAllInfo" />
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/textView57"
-        app:layout_constraintTop_toBottomOf="@+id/textView57">
+        app:layout_constraintStart_toStartOf="@+id/tvAllInfo"
+        app:layout_constraintTop_toBottomOf="@+id/tvAllInfo">
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:paddingBottom="16dp"
+            >
 
             <TextView
                 android:id="@+id/textView64"
@@ -227,7 +229,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName15" />
 
             <TextView
-                android:id="@+id/textView71"
+                android:id="@+id/tvOrganizationTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -238,18 +240,29 @@
                 app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName16" />
 
             <TextView
-                android:id="@+id/textView72"
+                android:id="@+id/tvPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/cairo_bold"
+                android:text="@string/phone_number"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@+id/textView70"
+                app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName16" />
+
+            <TextView
+                android:id="@+id/tvEmailTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:fontFamily="@font/cairo_bold"
                 android:text="@string/email"
                 android:textColor="@color/black"
-                app:layout_constraintStart_toStartOf="@+id/textView71"
-                app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName17" />
+                app:layout_constraintStart_toStartOf="@+id/tvOrganizationTitle"
+                app:layout_constraintTop_toBottomOf="@+id/etOrgnization" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName17"
+                android:id="@+id/etOrgnization"
                 android:layout_width="0dp"
                 android:layout_height="@dimen/_37sdp"
                 android:layout_marginTop="4dp"
@@ -264,10 +277,22 @@
                 android:textColorHint="@color/black"
                 app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName13"
                 app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName13"
-                app:layout_constraintTop_toBottomOf="@+id/textView71" />
+                app:layout_constraintTop_toBottomOf="@+id/tvOrganizationTitle" />
+
+            <include
+                android:id="@+id/etPhoneNumber"
+                layout="@layout/include_phone_number"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_37sdp"
+                android:layout_marginTop="4dp"
+
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvPhone" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName18"
+                android:id="@+id/etEmail"
                 android:layout_width="0dp"
                 android:layout_height="@dimen/_37sdp"
                 android:layout_marginTop="4dp"
@@ -277,13 +302,13 @@
                 android:ems="10"
                 android:fontFamily="@font/cairo_medium"
                 android:hint="@string/email"
-                android:inputType="textPersonName"
+                android:inputType="textEmailAddress"
                 android:paddingStart="@dimen/_12sdp"
                 android:paddingEnd="@dimen/_14sdp"
                 android:textColorHint="@color/black"
                 app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName13"
                 app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName13"
-                app:layout_constraintTop_toBottomOf="@+id/textView72" />
+                app:layout_constraintTop_toBottomOf="@+id/tvEmailTitle" />
 
             <EditText
                 android:id="@+id/editTextTextPersonName16"
@@ -313,9 +338,10 @@
                 android:fontFamily="@font/cairo_bold"
                 android:text="@string/confirm_changes"
                 android:textColor="@color/white"
-                app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName18"
-                app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName18"
-                app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName18" />
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@+id/etEmail"
+                app:layout_constraintStart_toStartOf="@+id/etEmail"
+                app:layout_constraintTop_toBottomOf="@+id/etEmail" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

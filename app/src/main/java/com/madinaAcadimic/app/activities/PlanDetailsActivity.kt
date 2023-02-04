@@ -13,10 +13,16 @@ class PlanDetailsActivity : AppCompatActivity() {
         activityPlanDetailsBinding = ActivityPlanDetailsBinding.inflate(layoutInflater)
         setContentView(activityPlanDetailsBinding.root)
 
-        activityPlanDetailsBinding.rvRemaining.adapter = SimpleAdapter(R.layout.item_remaning, itemCountA = 5)
-        activityPlanDetailsBinding.rvDetails.adapter = SimpleAdapter(R.layout.item_details, itemCountA = 5)
-        activityPlanDetailsBinding.rvCompleted.adapter = SimpleAdapter(R.layout.item_completed, itemCountA = 5)
-        activityPlanDetailsBinding.rvSessions.adapter = SimpleAdapter(R.layout.item_sessions, itemCountA = 5)
+
+        activityPlanDetailsBinding.tvPlans.setOnClickListener {
+            finish()
+        }
+
+
+        activityPlanDetailsBinding.rvRemaining.adapter = SimpleAdapter(R.layout.item_remaning, itemCountA = 3)
+        activityPlanDetailsBinding.rvDetails.adapter = SimpleAdapter(R.layout.item_details, itemCountA = 3)
+        activityPlanDetailsBinding.rvCompleted.adapter = SimpleAdapter(R.layout.item_completed, itemCountA = 3)
+        activityPlanDetailsBinding.rvSessions.adapter = SimpleAdapter(R.layout.item_sessions, itemCountA = 3)
 
     }
 }

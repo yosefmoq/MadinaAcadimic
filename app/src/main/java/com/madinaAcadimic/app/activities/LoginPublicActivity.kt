@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.madinaAcadimic.app.MainActivity
 import com.madinaAcadimic.app.R
+import com.madinaAcadimic.app.constants.Constants
 import com.madinaAcadimic.app.databinding.ActivityLoginPublicBinding
 
 class LoginPublicActivity : AppCompatActivity() {
@@ -15,7 +16,8 @@ class LoginPublicActivity : AppCompatActivity() {
         setContentView(activityLoginPublicBinding.root)
 
         activityLoginPublicBinding.btnLogin.setOnClickListener {
-            startActivity(Intent(this@LoginPublicActivity,MainActivity::class.java))
+            startActivity(Intent(this@LoginPublicActivity,MainActivity::class.java).putExtra(
+                Constants.USER_TYPE,Constants.USER))
         }
         activityLoginPublicBinding.btnOrganizationLogin.setOnClickListener {
             startActivity(Intent(this@LoginPublicActivity,LoginOrganizationActivity::class.java))
