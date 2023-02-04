@@ -30,6 +30,9 @@ class TeachersFragment : Fragment() {
 
             }
 
+            override fun onViewClicked(viewID: Int) {
+            }
+
         })
 
         fragmentTeachersBinding.ivFilter.setOnClickListener {

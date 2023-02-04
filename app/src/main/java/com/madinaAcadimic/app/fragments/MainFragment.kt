@@ -33,11 +33,17 @@ class MainFragment : Fragment() {
             override fun onItemClick(position: Int) {
 
             }
+
+            override fun onViewClicked(viewID: Int) {
+            }
         })
 
         fragmentMainBinding.rvPlans.adapter = SimpleAdapter(R.layout.item_save_plan, onItemClickListener = object :OnItemClickListener{
             override fun onItemClick(position: Int) {
 
+            }
+
+            override fun onViewClicked(viewID: Int) {
             }
 
         })
