@@ -292,7 +292,7 @@
         app:layout_constraintTop_toBottomOf="@+id/divider6" />
 
     <TextView
-        android:id="@+id/tvName6"
+        android:id="@+id/tvStatistics"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:drawablePadding="@dimen/_6sdp"
@@ -321,7 +321,7 @@
         app:drawableStartCompat="@drawable/ic_finance_account"
         app:layout_constraintEnd_toEndOf="@+id/divider2"
         app:layout_constraintStart_toStartOf="@+id/divider2"
-        app:layout_constraintTop_toBottomOf="@+id/tvName6" />
+        app:layout_constraintTop_toBottomOf="@+id/tvStatistics" />
 
     <View
         android:id="@+id/divider8"

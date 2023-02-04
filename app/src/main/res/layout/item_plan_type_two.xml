@@ -19,6 +19,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:background="@color/transparent"
             android:orientation="vertical">
             <TextView
                 android:id="@+id/tvDate"
@@ -42,14 +44,18 @@
                 android:textSize="@dimen/_8ssp" />
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/textView108"
+        <EditText
+            android:id="@+id/etAmount"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="3"
-            android:layout_marginStart="20dp"
             android:fontFamily="@font/cairo_medium"
             android:text="@string/amount"
+            android:paddingHorizontal="@dimen/_4sdp"
+            android:paddingVertical="@dimen/_2sdp"
+            android:background="@color/transparent"
+            android:layout_marginHorizontal="@dimen/_16sdp"
+            android:enabled="false"
             android:textColor="@color/black"
 
             android:textSize="@dimen/_8ssp" />

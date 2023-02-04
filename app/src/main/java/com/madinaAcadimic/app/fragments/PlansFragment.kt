@@ -9,6 +9,8 @@ import android.view.View
 import android.view.ViewGroup
 import com.madinaAcadimic.app.R
 import com.madinaAcadimic.app.activities.AddPlanActivity
+import com.madinaAcadimic.app.activities.PlanDetailsActivity
+import com.madinaAcadimic.app.adapters.OnItemClickListener
 import com.madinaAcadimic.app.adapters.SimpleAdapter
 import com.madinaAcadimic.app.databinding.FragmentPlansBinding
 
@@ -26,7 +28,12 @@ class PlansFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        fragmentPlansBinding.rvPlans.adapter = SimpleAdapter(R.layout.item_current_plans,6)
+        fragmentPlansBinding.rvPlans.adapter = SimpleAdapter(R.layout.item_current_plans,6, onItemClickListener = object:OnItemClickListener{
+            override fun onItemClick(position: Int) {
+                startActivity(Intent(requireContext(),PlanDetailsActivity::class.java))
+            }
+
+        })
 
 
         fragmentPlansBinding.llAdd.setOnClickListener {

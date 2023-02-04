@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.madinaAcadimic.app.R
 import com.madinaAcadimic.app.activities.AccountInformationActivity
+import com.madinaAcadimic.app.activities.StatisticsActivity
 import com.madinaAcadimic.app.adapters.SimpleAdapter
 import com.madinaAcadimic.app.databinding.BottomSheetAddAccountBinding
 import com.madinaAcadimic.app.databinding.BottomSheetChangeAccountBinding
@@ -38,6 +39,9 @@ class AccountFragment : Fragment() {
         }
         fragmentAccountBinding.tvAccountInformation.setOnClickListener {
             requireActivity().startActivity(Intent(requireContext(),AccountInformationActivity::class.java))
+        }
+        fragmentAccountBinding.tvStatistics.setOnClickListener {
+            startActivity(Intent(requireContext(),StatisticsActivity::class.java    ))
         }
 
     }

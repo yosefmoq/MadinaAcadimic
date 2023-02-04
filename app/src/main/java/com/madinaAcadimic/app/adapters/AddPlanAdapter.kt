@@ -1,8 +1,6 @@
 package com.madinaAcadimic.app.adapters
 
-import android.content.res.ColorStateList
 import android.graphics.Color
-import android.graphics.drawable.ColorDrawable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,6 +9,7 @@ import com.madinaAcadimic.app.databinding.ItemAddPlanBinding
 
 class AddPlanAdapter(val count:Int,val showIcon:Boolean = false): RecyclerView.Adapter<AddPlanAdapter.ViewHolder>() {
     var selectedIndex = -1
+    var isEdit = false
     class ViewHolder(val itemAddPlanBinding:ItemAddPlanBinding) : RecyclerView.ViewHolder(itemAddPlanBinding.root)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder =
@@ -23,6 +22,7 @@ class AddPlanAdapter(val count:Int,val showIcon:Boolean = false): RecyclerView.A
             selectedIndex = position
             notifyDataSetChanged()
         }
+
 
         if(showIcon){
             holder.itemAddPlanBinding.ivIcon.visibility = View.VISIBLE

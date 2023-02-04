@@ -128,7 +128,23 @@
     <string name="from_surah">من سورة</string>
     <string name="ayah">الآية</string>
     <string name="to_surah">إلى سورة</string>
-
+    <string name="start_date">تاريخ البدء بالخطة</string>
+    <string name="eliminated_days">الأيام المستثناة</string>
+    <string name="monday">الإثنين</string>
+    <string name="details">التفاصيل</string>
+    <string name="completedA">المنجز</string>
+    <string name="remaining">المتبقي</string>
+    <string name="from">من</string>
+    <string name="to">إلى</string>
+    <string name="statusA">الحالة</string>
+    <string name="diff">الفرق</string>
+    <string name="good">متوافق</string>
+    <string name="doneA">الإنجاز</string>
+    <string name="congratulations_nyou_finished_reading">Congratulations !\nYou finished reading</string>
+    <string name="ayah_a">Ayah</string>
+    <string name="thank_god_nyou_read_today">Thank God !\nYou read today</string>
+    <string name="_19_shawal_1444">19 Shawal 1444</string>
+    <string name="may_allah_accept_you_read_this_month">May Allah Accept !You read this month</string>
 
 
 </resources>

@@ -130,4 +130,27 @@
     <string name="from_surah">From Surah</string>
     <string name="ayah">Ayah</string>
     <string name="to_surah">To Surah</string>
+    <string name="start_date">Start Date</string>
+    <string name="eliminated_days">Eliminated Days</string>
+    <string name="monday">Monday</string>
+    <string name="from">from</string>
+    <string name="to">to</string>
+    <string name="statusA">State</string>
+    <string name="diff">Diff</string>
+    <string name="good">Up to plan</string>
+
+    <string name="details">Details</string>
+    <string name="completedA">Completed</string>
+    <string name="remaining">Remaining</string>
+    <string name="doneA">Done</string>
+    <string name="score">Score</string>
+    <string name="record">Record</string>
+    <string name="duration">Duration</string>
+    <string name="congratulations_nyou_finished_reading">Congratulations !\nYou finished reading</string>
+    <string name="page">Page</string>
+    <string name="letter">Letter</string>
+    <string name="ayah_a">Ayah</string>
+    <string name="thank_god_nyou_read_today">Thank God !\nYou read today</string>
+    <string name="_19_shawal_1444">19 Shawal 1444</string>
+    <string name="may_allah_accept_you_read_this_month">May Allah Accept\n!You read this month</string>
 </resources>

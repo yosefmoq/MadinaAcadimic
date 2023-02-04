@@ -20,7 +20,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/_2sdp"
-            android:layout_weight="1"
+            android:layout_weight="1.4"
             android:orientation="vertical">
             <TextView
                 android:id="@+id/tvDate"
@@ -45,14 +45,14 @@
                 android:textSize="@dimen/_8ssp" />
         </LinearLayout>
 
-        <EditText
+        <TextView
             android:id="@+id/etFromSurah"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:fontFamily="@font/cairo_medium"
             android:gravity="center"
-            android:text="@string/from_surah"
+            android:text="@string/surat_albaqarah"
             android:layout_marginHorizontal="@dimen/_2sdp"
             android:background="@color/transparent"
             android:enabled="false"
@@ -60,14 +60,14 @@
 
             android:textSize="@dimen/_8ssp" />
 
-        <EditText
+        <TextView
             android:id="@+id/etFromAyah"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_weight="0.6"
             android:fontFamily="@font/cairo_medium"
             android:gravity="center"
-            android:text="@string/ayah"
+            android:text="80"
             android:layout_marginHorizontal="@dimen/_2sdp"
             android:background="@color/transparent"
             android:enabled="false"
@@ -75,7 +75,7 @@
 
             android:textSize="@dimen/_8ssp" />
 
-        <EditText
+        <TextView
             android:id="@+id/etToSurah"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -85,22 +85,67 @@
             android:background="@color/transparent"
             android:enabled="false"
             android:layout_marginHorizontal="@dimen/_2sdp"
-            android:text="@string/to_surah"
+            android:text="@string/surat_albaqarah"
             android:textColor="@color/black"
 
             android:textSize="@dimen/_8ssp" />
 
-        <EditText
+        <TextView
             android:id="@+id/etToAyah"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_weight="0.6"
             android:fontFamily="@font/cairo_medium"
             android:gravity="center"
             android:background="@color/transparent"
             android:enabled="false"
             android:layout_marginHorizontal="@dimen/_2sdp"
-            android:text="@string/ayah"
+            android:text="100"
+            android:textColor="@color/black"
+
+            android:textSize="@dimen/_8ssp" />
+
+        <TextView
+            android:id="@+id/etToAyah4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_2sdp"
+            android:layout_weight="0.6"
+            android:background="@color/transparent"
+            android:enabled="false"
+            android:fontFamily="@font/cairo_medium"
+            android:gravity="center"
+            android:text="100"
+            android:textColor="@color/black"
+
+            android:textSize="@dimen/_8ssp" />
+
+        <TextView
+            android:id="@+id/etToAyah2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_2sdp"
+            android:layout_weight="1.2"
+            android:background="@color/transparent"
+            android:enabled="false"
+            android:fontFamily="@font/cairo_medium"
+            android:gravity="center"
+            android:text="@string/good"
+            android:textColor="@color/black"
+
+            android:textSize="@dimen/_8ssp" />
+
+        <TextView
+            android:id="@+id/etToAyah3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_2sdp"
+            android:layout_weight="0.6"
+            android:background="@color/transparent"
+            android:enabled="false"
+            android:fontFamily="@font/cairo_medium"
+            android:gravity="center"
+            android:text="0"
             android:textColor="@color/black"
 
             android:textSize="@dimen/_8ssp" />
