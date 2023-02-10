@@ -12,7 +12,7 @@
         android:theme="@style/Theme.MadinaAcadimic"
         tools:targetApi="31">
         <activity
-            android:name=".WalletTwoActivity"
+            android:name=".activities.WalletTwoActivity"
             android:exported="false" />
         <activity
             android:name=".activities.WalletActivity"

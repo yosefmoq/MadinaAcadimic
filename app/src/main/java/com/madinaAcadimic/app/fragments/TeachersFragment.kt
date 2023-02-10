@@ -1,5 +1,6 @@
 package com.madinaAcadimic.app.fragments
 import android.app.Dialog
+import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
@@ -12,6 +13,7 @@ import com.google.android.flexbox.FlexDirection
 import com.google.android.flexbox.FlexboxLayoutManager
 import com.google.android.flexbox.JustifyContent
 import com.madinaAcadimic.app.R
+import com.madinaAcadimic.app.activities.TeacherDetailsActivity
 import com.madinaAcadimic.app.adapters.OnItemClickListener
 import com.madinaAcadimic.app.adapters.SimpleAdapter
 import com.madinaAcadimic.app.databinding.DialogTeacherFilterBinding
@@ -27,7 +29,7 @@ class TeachersFragment : Fragment() {
         fragmentTeachersBinding = FragmentTeachersBinding.inflate(inflater,container,false)
         fragmentTeachersBinding.rvTeachers.adapter = SimpleAdapter(R.layout.item_teacher_row,10, onItemClickListener = object:OnItemClickListener{
             override fun onItemClick(position: Int) {
-
+                startActivity(Intent(requireContext(),TeacherDetailsActivity::class.java))
             }
 
             override fun onViewClicked(viewID: Int) {

@@ -10,6 +10,7 @@ import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.madinaAcadimic.app.MainActivity
 import com.madinaAcadimic.app.R
 import com.madinaAcadimic.app.activities.AccountInformationActivity
+import com.madinaAcadimic.app.activities.ChangePasswordActivity
 import com.madinaAcadimic.app.activities.FinancialActivity
 import com.madinaAcadimic.app.activities.StatisticsActivity
 import com.madinaAcadimic.app.adapters.SimpleAdapter
@@ -28,6 +29,8 @@ class AccountFragment : Fragment() {
         // Inflate the layout for this fragment
         fragmentAccountBinding = FragmentAccountBinding.inflate(inflater,container,false)
         return fragmentAccountBinding.root
+
+
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -50,7 +53,10 @@ class AccountFragment : Fragment() {
 
             startActivity(Intent(requireContext(),FinancialActivity::class.java    ))
 
+        }
 
+        fragmentAccountBinding.tvChangePassword.setOnClickListener {
+            startActivity(Intent(requireContext(),ChangePasswordActivity::class.java))
         }
 
     }

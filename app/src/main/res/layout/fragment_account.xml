@@ -17,7 +17,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tvChangePassword"
+        android:id="@+id/tcAccountInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_20sdp"
@@ -167,7 +167,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tvName8" />
 
     <TextView
-        android:id="@+id/tvName5"
+        android:id="@+id/tvChangePassword"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:drawablePadding="@dimen/_6sdp"
@@ -276,9 +276,9 @@
         android:layout_height="1dp"
         android:layout_marginTop="@dimen/_8sdp"
         android:background="#BAC5D9"
-        app:layout_constraintEnd_toEndOf="@+id/tvName5"
-        app:layout_constraintStart_toStartOf="@+id/tvName5"
-        app:layout_constraintTop_toBottomOf="@+id/tvName5" />
+        app:layout_constraintEnd_toEndOf="@+id/tvChangePassword"
+        app:layout_constraintStart_toStartOf="@+id/tvChangePassword"
+        app:layout_constraintTop_toBottomOf="@+id/tvChangePassword" />
 
     <TextView
         android:id="@+id/textView60"

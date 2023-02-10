@@ -185,7 +185,6 @@
     <string name="great_job_nyou_read_this_year">Great Job !\nYou read this year</string>
     <string name="notification">Notification</string>
     <string name="delete_all">Delete All</string>
-    <string name="record_avalible">تسجيل الحصة متاح</string>
     <string name="wallet">Wallet</string>
     <string name="balance_a">Balance</string>
     <string name="_60_minutes">60 Minutes</string>
@@ -207,5 +206,13 @@
     <string name="_30_minutes_nvideo_sessions">30 minutes\nVideo sessions</string>
     <string name="you_can_exchange_purchased_audio_learning_minutes_for_nvideo_learning_minutes">You can exchange purchased audio learning minutes for\nvideo learning minutes</string>
     <string name="payment">Payment</string>
+    <string name="available_later">Available Later</string>
+    <string name="hafs_an_assim">Hafs An Assim</string>
+    <string name="arabic">Arabic</string>
+    <string name="teacher_s_reference">Teacher’s reference</string>
+    <string name="notify_when_available">Notify When Available</string>
+    <string name="recharge">Recharge</string>
+    <string name="record_avalible">Session Recording Available</string>
+    <string name="price_in_r_s">Price in R.S</string>
 
 </resources>

@@ -158,13 +158,13 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="wrap_content"
-                android:layout_height="40dp"
+                android:layout_height="50dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="@dimen/_6sdp"
                 android:background="#EFEFF4"
                 android:paddingHorizontal="@dimen/_10sdp">
 
-                <TextView
+            <!--    <TextView
                     android:id="@+id/textView136"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -197,7 +197,15 @@
                     app:layout_constraintBottom_toBottomOf="@+id/textView135"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView135" />
+                    app:layout_constraintTop_toBottomOf="@+id/textView135" />-->
+                <NumberPicker
+                    android:id="@+id/numberPickerMin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
 
@@ -214,19 +222,29 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/cairo_semi_bold"
                 android:gravity="center_horizontal"
-                android:text="Price in R.S"
+                android:text="@string/price_in_r_s"
                 android:textColor="@color/black"
                 android:textSize="@dimen/_12ssp" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="wrap_content"
-                android:layout_height="40dp"
+                android:layout_height="50dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="@dimen/_6sdp"
                 android:background="#EFEFF4"
                 android:paddingHorizontal="@dimen/_10sdp">
 
-                <TextView
+
+                <NumberPicker
+                    android:id="@+id/numberPickerPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <!--<TextView
                     android:id="@+id/textView139"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -258,7 +276,8 @@
                     app:layout_constraintBottom_toBottomOf="@+id/textView138"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView138" />
+                    app:layout_constraintTop_toBottomOf="@+id/textView138" />-->
+
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
     </LinearLayout>
@@ -313,16 +332,17 @@
         app:layout_constraintStart_toStartOf="@+id/imageView8" />
 
     <TextView
+        android:id="@+id/tvOrderDetails"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
-        android:gravity="center_horizontal"
-        android:text="@string/order_details"
-        android:textSize="@dimen/_11ssp"
-        android:paddingVertical="@dimen/_12sdp"
-        android:textColor="@color/primary_color"
-        android:fontFamily="@font/cairo_bold"
         android:background="@drawable/bg_button_outlier_green"
+        android:fontFamily="@font/cairo_bold"
+        android:gravity="center_horizontal"
+        android:paddingVertical="@dimen/_12sdp"
+        android:text="@string/order_details"
+        android:textColor="@color/primary_color"
+        android:textSize="@dimen/_11ssp"
         app:layout_constraintEnd_toStartOf="@+id/guideline5"
         app:layout_constraintStart_toStartOf="@+id/guideline4"
         app:layout_constraintTop_toBottomOf="@+id/imageView28" />

@@ -16,6 +16,9 @@ class NotificationActivity : AppCompatActivity() {
         activityNotificationBinding = ActivityNotificationBinding.inflate(layoutInflater)
         setContentView(activityNotificationBinding.root)
 
+        activityNotificationBinding.tvNotification.setOnClickListener {
+            finish()
+        }
         val n1 = Notification(
             "تسجيل الحصة متاح",
             "هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، .",
