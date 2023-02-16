@@ -3,6 +3,8 @@ package com.madinaAcadimic.app.activities
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.core.view.get
+import com.madinaAcadimic.app.MainActivity
 import com.madinaAcadimic.app.R
 import com.madinaAcadimic.app.adapters.AddPlanAdapter
 import com.madinaAcadimic.app.adapters.PlanDetailsTypeOneAdapter
@@ -57,7 +59,30 @@ class AddPlanActivity : AppCompatActivity() {
             }
         }
         activityAddPlanBinding.tvPlans.setOnClickListener {
-            finish()
+            if(currentStep == 1){
+                finish()
+            }else if(currentStep == 2) {
+                currentStep = 1
+                activityAddPlanBinding.clStep1.visibility = View.VISIBLE
+                activityAddPlanBinding.clStep2.visibility = View.GONE
+                activityAddPlanBinding.ivStep2.setImageResource(R.drawable.ic_check_inactive)
+            }else if(currentStep == 3){
+                currentStep = 2
+                activityAddPlanBinding.clStep2.visibility = View.VISIBLE
+                activityAddPlanBinding.clStep3.visibility = View.GONE
+                activityAddPlanBinding.ivStep3.setImageResource(R.drawable.ic_check_inactive)
+                activityAddPlanBinding.vStep2.setBackgroundColor(getColor(R.color.sub_text_color))
+                activityAddPlanBinding.btnNext.text = getString(R.string.naxt)
+
+            }else if(currentStep == 4){
+                currentStep = 3
+                activityAddPlanBinding.btnNext.text = getString(R.string.naxt)
+
+                activityAddPlanBinding.clStep3.visibility = View.VISIBLE
+                activityAddPlanBinding.clStep4.visibility = View.GONE
+                activityAddPlanBinding.ivStep4.setImageResource(R.drawable.ic_check_inactive)
+                activityAddPlanBinding.vStep3.setBackgroundColor(getColor(R.color.sub_text_color))
+            }
         }
         activityAddPlanBinding.tvEdit.setOnClickListener {
             isEdit = !isEdit
@@ -68,6 +93,31 @@ class AddPlanActivity : AppCompatActivity() {
             }
             planDetailsAdapter.notifyDataSetChanged()
         }
+
+        activityAddPlanBinding.bnv.setOnItemSelectedListener {
+            finish()
+            when(it.itemId){
+                R.id.navHome->{
+                    MainActivity.activityMainBinding.vp.currentItem = 0
+                }
+                R.id.navTeachers->{
+                    MainActivity.activityMainBinding.vp.currentItem = 1
+                }
+                R.id.navPlans->{
+                    MainActivity.activityMainBinding.vp.currentItem = 2
+                }
+                R.id.navSessions->{
+                    MainActivity.activityMainBinding.vp.currentItem = 3
+                }
+                R.id.navAccount->{
+                    MainActivity.activityMainBinding.vp.currentItem = 4
+                }
+
+            }
+            true
+        }
+        activityAddPlanBinding.bnv.menu[2].isChecked = true
+
 
     }
 }

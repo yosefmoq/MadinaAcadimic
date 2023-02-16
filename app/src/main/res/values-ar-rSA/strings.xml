@@ -193,7 +193,7 @@
     <string name="additional_sessions_no_split">مقاطع إضافية</string>
 
 
-    <string name="teacher_cap">Teacher <u><font fgcolor='#000000'>محمد علي إسماعيل</font></u></string>
+    <string name="teacher_cap">المعلم <u><font fgcolor='#000000'>محمد علي إسماعيل</font></u></string>
     <string name="rate_cap">تقييم</string>
     <string name="report_cap">شكوى</string>
     <string name="reported">تمت الشكوى</string>
@@ -214,4 +214,19 @@
     <string name="rated">تم التقييم</string>
     <string name="record_avalible">تسجيل الحصة متاح</string>
     <string name="price_in_r_s">المبلغ بالريال السعودي</string>
+    <string name="purchases">Purchases</string>
+    <string name="charge">Charge</string>
+    <string name="_5_00">5:00 دقائق</string>
+    <string name="ismail">إسماعيل محمد عبد الستار</string>
+    <string name="rewayet_hafs">رواية حفص عن عاصم</string>
+    <string name="test_text">هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، .</string>
+    <string name="today">اليوم</string>
+    <string name="yesterday">الأمس</string>
+    <string name="test_date">الجمعة 11-12-1444</string>
+    <string name="create_a_new_account">إنشاء حساب جديد</string>
+    <string name="account_information">معلومات الحساب</string>
+    <string name="programs">البرامج</string>
+    <string name="path">المسار</string>
+    <string name="wednesday">الأربعاء</string>
+
 </resources>

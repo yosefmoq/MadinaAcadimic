@@ -1,10 +1,11 @@
 package com.madinaAcadimic.app.activities
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
+import android.text.InputType
 import android.text.TextWatcher
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.madinaAcadimic.app.R
 import com.madinaAcadimic.app.databinding.ActivityChangePasswordBinding
@@ -45,6 +46,15 @@ class ChangePasswordActivity : AppCompatActivity() {
         })
         activityChangePasswordBinding.tvChangePassword.setOnClickListener {
             finish()
+        }
+
+        activityChangePasswordBinding.ivShowPassword.setOnClickListener {
+            activityChangePasswordBinding.etNewPassword.inputType =
+                InputType.TYPE_CLASS_TEXT
+        }
+        activityChangePasswordBinding.ivShowPasswordConfirm.setOnClickListener {
+            activityChangePasswordBinding.etConfirmPassword.inputType =
+                InputType.TYPE_CLASS_TEXT
         }
     }
 }

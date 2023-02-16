@@ -30,7 +30,12 @@ class ChargeFinanciesFragment : Fragment() {
 
         binding.rvSessions.adapter = SimpleAdapter(R.layout.item_charge_financial_report,6)
         binding.ivFilter.setOnClickListener {
-            FinancesFilterFragment().show(childFragmentManager,"FinancesFilterFragment")
+            val financeFilterFragment = FinancesFilterFragment()
+            val bundle = Bundle()
+            bundle.putInt("type", 1)
+            financeFilterFragment.arguments = bundle
+            financeFilterFragment.show(childFragmentManager, "FinancesFilterFragment")
+
         }
 
     }

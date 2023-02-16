@@ -156,49 +156,46 @@
         android:id="@+id/llSessionExtendedDetails"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:gravity="top"
+        android:orientation="horizontal"
         android:visibility="gone"
-        app:layout_constraintTop_toBottomOf="@id/llSessionDetails"
-        >
+        app:layout_constraintTop_toBottomOf="@id/llSessionDetails">
 
         <LinearLayout
-            android:layout_height="wrap_content"
             android:layout_width="0dp"
-            android:layout_weight="0.4"
+            android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:paddingStart="@dimen/_10sdp"
-            android:orientation="vertical">
+            android:layout_weight="0.4"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/_10sdp">
 
             <TextView
                 android:id="@+id/tvPageNum"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="4"
-                android:textColor="@color/black"
                 android:layout_gravity="center_horizontal"
-                android:textSize="@dimen/_10ssp"
-                android:fontFamily="@font/cairo_medium"
                 android:background="@drawable/ic_clarity_book_line"
+                android:fontFamily="@font/cairo_medium"
                 android:gravity="center"
                 android:paddingTop="@dimen/_4sdp"
-                />
+                android:text="4"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10ssp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/page"
-                android:fontFamily="@font/cairo_bold"
-                android:textColor="@color/darker_green_color"
-                android:textSize="@dimen/_9ssp"
                 android:layout_gravity="center_horizontal"
-                />
+                android:fontFamily="@font/cairo_bold"
+                android:text="@string/page"
+                android:textColor="@color/darker_green_color"
+                android:textSize="@dimen/_9ssp" />
 
         </LinearLayout>
 
         <LinearLayout
-            android:layout_height="wrap_content"
             android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_weight="0.4"
             android:orientation="vertical">
 
@@ -206,33 +203,31 @@
                 android:id="@+id/tvLetterNum"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/ic_green_circle"
+                android:fontFamily="@font/cairo_medium"
+
+                android:gravity="center"
                 android:text="600"
                 android:textColor="@color/black"
-                android:layout_gravity="center_horizontal"
-
-                android:textSize="@dimen/_10ssp"
-                android:fontFamily="@font/cairo_medium"
-                android:background="@drawable/ic_green_circle"
-                android:gravity="center"
-                />
+                android:textSize="@dimen/_10ssp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/letter"
-                android:fontFamily="@font/cairo_bold"
-                android:textColor="@color/primary_color"
-                android:textSize="@dimen/_9ssp"
                 android:layout_gravity="center_horizontal"
-                />
+                android:fontFamily="@font/cairo_bold"
+                android:text="@string/letter"
+                android:textColor="@color/primary_color"
+                android:textSize="@dimen/_9ssp" />
 
         </LinearLayout>
 
         <LinearLayout
-            android:layout_height="wrap_content"
             android:layout_width="wrap_content"
-            android:layout_marginStart="@dimen/_2sdp"
+            android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/_2sdp"
 
             android:orientation="vertical">
 
@@ -240,31 +235,29 @@
                 android:id="@+id/tvAyahNum"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="40"
                 android:layout_gravity="center_horizontal"
-                android:textColor="@color/black"
-                android:textSize="@dimen/_10ssp"
-                android:fontFamily="@font/cairo_medium"
                 android:background="@drawable/ic_islamic_star"
+                android:fontFamily="@font/cairo_medium"
                 android:gravity="center"
-                />
+                android:text="40"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10ssp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/ayah"
-                android:fontFamily="@font/cairo_bold"
-                android:textColor="@color/yellow_color"
-                android:textSize="@dimen/_9ssp"
                 android:layout_gravity="center_horizontal"
-                />
+                android:fontFamily="@font/cairo_bold"
+                android:text="@string/ayah"
+                android:textColor="@color/yellow_color"
+                android:textSize="@dimen/_9ssp" />
 
         </LinearLayout>
 
 
         <LinearLayout
-            android:layout_height="wrap_content"
             android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_weight="0.8"
             android:orientation="vertical">
 
@@ -272,85 +265,80 @@
                 android:id="@+id/tvAdditionalSessions"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/additional_sessions"
-                android:textColor="@color/primary_color"
-                android:padding="@dimen/_6sdp"
-
                 android:layout_gravity="center_horizontal"
-                android:textSize="@dimen/_9ssp"
+                android:background="@drawable/bg_additional_sessions"
                 android:fontFamily="@font/cairo_bold"
 
-                android:background="@drawable/bg_additional_sessions"
                 android:gravity="center"
-                />
+                android:padding="@dimen/_6sdp"
+                android:text="@string/additional_sessions"
 
+                android:textColor="@color/primary_color"
+                android:textSize="@dimen/_9ssp" />
 
 
         </LinearLayout>
 
-
-
-    <LinearLayout
-        android:layout_height="wrap_content"
-        android:layout_width="0dp"
-        android:layout_weight="1"
-        android:gravity="center_horizontal"
-        android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/tvTeacher"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/teacher_cap"
-            android:layout_marginEnd="@dimen/_2sdp"
-            android:textSize="@dimen/_7ssp"
-            android:fontFamily="@font/cairo_bold"
-            android:textColor="@color/sub_text_color"
-            />
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_6sdp"
-            android:layout_marginEnd="@dimen/_2sdp"
+            android:layout_weight="1"
             android:gravity="center_horizontal"
-            android:orientation="horizontal">
+            android:orientation="vertical">
 
             <TextView
-                android:id="@+id/tvRate"
+                android:id="@+id/tvTeacher"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/bg_rate"
-                android:text="@string/rate_cap"
-                android:textColor="@color/lighter_yellow_color"
+                android:layout_marginEnd="@dimen/_2sdp"
                 android:fontFamily="@font/cairo_bold"
-                android:textSize="@dimen/_8ssp"
-                android:paddingStart="@dimen/_6sdp"
-                android:paddingEnd="@dimen/_7sdp"
-                android:drawablePadding="@dimen/_2sdp"
-                app:drawableEndCompat="@drawable/ic_rate_indicator" />
+                android:text="@string/teacher_cap"
+                android:textColor="@color/sub_text_color"
+                android:textSize="@dimen/_7ssp" />
 
-            <TextView
-                android:id="@+id/tvReport"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/bg_report"
-                android:text="@string/report_cap"
-                android:textColor="@color/our_red"
-                android:fontFamily="@font/cairo_bold"
-                android:layout_marginStart="@dimen/_8sdp"
-                android:textSize="@dimen/_8ssp"
-                android:paddingStart="@dimen/_6sdp"
-                android:paddingEnd="@dimen/_7sdp"
-                android:drawablePadding="@dimen/_2sdp"
-                app:drawableEndCompat="@drawable/ic_outline_report" />
+                android:layout_marginTop="@dimen/_6sdp"
+                android:layout_marginEnd="@dimen/_2sdp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvRate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_rate"
+                    android:drawablePadding="@dimen/_2sdp"
+                    android:fontFamily="@font/cairo_bold"
+                    android:paddingStart="@dimen/_6sdp"
+                    android:paddingEnd="@dimen/_7sdp"
+                    android:text="@string/rate_cap"
+                    android:textColor="@color/lighter_yellow_color"
+                    android:textSize="@dimen/_7ssp"
+                    app:drawableEndCompat="@drawable/ic_rate_indicator" />
+
+                <TextView
+                    android:id="@+id/tvReport"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:background="@drawable/bg_report"
+                    android:drawablePadding="@dimen/_2sdp"
+                    android:fontFamily="@font/cairo_bold"
+                    android:paddingStart="@dimen/_6sdp"
+                    android:paddingEnd="@dimen/_7sdp"
+                    android:text="@string/report_cap"
+                    android:textColor="@color/our_red"
+                    android:textSize="@dimen/_7ssp"
+                    app:drawableEndCompat="@drawable/ic_outline_report" />
+
+
+            </LinearLayout>
 
 
         </LinearLayout>
-
-
-    </LinearLayout>
-
 
 
     </LinearLayout>

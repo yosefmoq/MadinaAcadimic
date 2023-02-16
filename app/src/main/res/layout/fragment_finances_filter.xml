@@ -10,8 +10,7 @@
     android:layout_gravity="center"
     android:layout_height="wrap_content"
     android:background="@color/white"
-    tools:context=".fragments.AdditionalSessionsPopupFragment"
-    >
+    tools:context=".fragments.AdditionalSessionsPopupFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
 
@@ -59,7 +58,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView127" />
 
         <TextView
-            android:id="@+id/textView130"
+            android:id="@+id/tvFromCalender"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_6sdp"
@@ -86,14 +85,16 @@
             android:text="@string/to_cap"
             android:textColor="@color/black"
             android:textSize="@dimen/_12ssp"
-            app:layout_constraintBottom_toBottomOf="@+id/textView130"
-            app:layout_constraintStart_toEndOf="@+id/textView130"
-            app:layout_constraintTop_toTopOf="@+id/textView130" />
+            app:layout_constraintBottom_toBottomOf="@+id/tvFromCalender"
+            app:layout_constraintStart_toEndOf="@+id/tvFromCalender"
+            app:layout_constraintTop_toTopOf="@+id/tvFromCalender" />
 
 
         <TextView
+            android:id="@+id/tvToCalender"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_6sdp"
             android:background="@drawable/bg_time_pick_tv"
             android:ellipsize="end"
             android:fontFamily="@font/cairo_medium"
@@ -101,7 +102,6 @@
             android:paddingHorizontal="@dimen/_8sdp"
             android:paddingVertical="@dimen/_3sdp"
             android:textColor="@color/black"
-            android:layout_marginStart="@dimen/_6sdp"
             app:drawableEndCompat="@drawable/ic_date"
             app:layout_constraintBottom_toBottomOf="@+id/textView129"
             app:layout_constraintStart_toEndOf="@+id/textView131"

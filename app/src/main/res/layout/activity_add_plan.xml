@@ -32,12 +32,13 @@
         app:layout_constraintStart_toStartOf="@+id/view"
         app:layout_constraintTop_toTopOf="@+id/view" />
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:gravity="center"
+        android:layout_marginHorizontal="@dimen/_1sdp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -47,47 +48,113 @@
             android:id="@+id/ivStepOne"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_12sdp"
-
+            android:layout_marginStart="@dimen/_16sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ic_check_active" />
 
         <View
             android:id="@+id/vStep1"
             android:layout_width="@dimen/_62sdp"
             android:layout_height="1dp"
-            android:background="#04C23A" />
+            android:background="#04C23A"
+            app:layout_constraintBottom_toBottomOf="@+id/ivStepOne"
+            app:layout_constraintStart_toEndOf="@+id/ivStepOne"
+            app:layout_constraintTop_toTopOf="@+id/ivStepOne" />
 
         <ImageView
             android:id="@+id/ivStep2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/ivStepOne"
+            app:layout_constraintStart_toEndOf="@+id/vStep1"
+            app:layout_constraintTop_toTopOf="@+id/ivStepOne"
             app:srcCompat="@drawable/ic_check_inactive" />
 
         <View
             android:id="@+id/vStep2"
             android:layout_width="@dimen/_62sdp"
             android:layout_height="1dp"
-            android:background="@color/sub_text_color" />
+            android:background="@color/sub_text_color"
+            app:layout_constraintBottom_toBottomOf="@+id/vStep1"
+            app:layout_constraintStart_toEndOf="@+id/ivStep2"
+            app:layout_constraintTop_toTopOf="@+id/vStep1" />
 
         <ImageView
             android:id="@+id/ivStep3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/ivStep2"
+            app:layout_constraintStart_toEndOf="@+id/vStep2"
+            app:layout_constraintTop_toTopOf="@+id/ivStep2"
             app:srcCompat="@drawable/ic_check_inactive" />
 
         <View
             android:id="@+id/vStep3"
             android:layout_width="@dimen/_62sdp"
             android:layout_height="1dp"
-            android:background="@color/sub_text_color" />
+            android:background="@color/sub_text_color"
+            app:layout_constraintBottom_toBottomOf="@+id/ivStep3"
+            app:layout_constraintStart_toEndOf="@+id/ivStep3"
+            app:layout_constraintTop_toTopOf="@+id/ivStep3" />
 
         <ImageView
             android:id="@+id/ivStep4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/ivStep3"
+            app:layout_constraintStart_toEndOf="@+id/vStep3"
+            app:layout_constraintTop_toTopOf="@+id/ivStep3"
             app:srcCompat="@drawable/ic_check_inactive" />
 
-    </LinearLayout>
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/path"
+            android:fontFamily="@font/cairo_bold"
+
+            android:textSize="@dimen/_8ssp"
+            app:layout_constraintEnd_toEndOf="@+id/ivStep2"
+            app:layout_constraintStart_toEndOf="@+id/vStep1"
+            app:layout_constraintTop_toBottomOf="@+id/ivStepOne" />
+
+        <TextView
+            android:id="@+id/textView33"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/amount"
+            android:fontFamily="@font/cairo_bold"
+
+            android:textSize="@dimen/_8ssp"
+            app:layout_constraintEnd_toEndOf="@+id/ivStep3"
+            app:layout_constraintStart_toEndOf="@+id/vStep2"
+            app:layout_constraintTop_toBottomOf="@+id/ivStepOne" />
+
+        <TextView
+            android:id="@+id/textView40"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/plan_details"
+            android:textSize="@dimen/_8ssp"
+            android:fontFamily="@font/cairo_bold"
+
+            app:layout_constraintEnd_toEndOf="@+id/ivStep4"
+            app:layout_constraintStart_toEndOf="@+id/vStep3"
+            app:layout_constraintTop_toBottomOf="@+id/ivStepOne" />
+
+        <TextView
+            android:id="@+id/textView30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/programs"
+            android:fontFamily="@font/cairo_bold"
+            android:textSize="@dimen/_8ssp"
+            app:layout_constraintEnd_toEndOf="@+id/ivStepOne"
+            app:layout_constraintStart_toStartOf="@+id/ivStepOne"
+            app:layout_constraintTop_toBottomOf="@+id/ivStepOne" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnNext"
@@ -100,7 +167,7 @@
         android:fontFamily="@font/cairo_extra_bold"
         android:background="@drawable/bg_green_button"
         android:layout_marginHorizontal="@dimen/_28sdp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bnv"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -212,7 +279,7 @@
             android:ems="10"
             android:inputType="textPersonName"
             android:paddingHorizontal="@dimen/_8ssp"
-            android:text="@string/search_programm"
+            android:hint="@string/search_programm"
             android:textSize="@dimen/_8ssp"
             app:layout_constraintBottom_toBottomOf="@+id/textView94"
             app:layout_constraintEnd_toEndOf="parent"
@@ -569,5 +636,16 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bnv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:menu="@menu/main_menu"
+
+            app:labelVisibilityMode="labeled"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

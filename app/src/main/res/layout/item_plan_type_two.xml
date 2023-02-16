@@ -29,7 +29,7 @@
                 android:layout_weight="1"
                 android:fontFamily="@font/cairo_bold"
                 android:gravity="center"
-                android:text="@string/date"
+                android:text="@string/wednesday"
                 android:textColor="@color/black"
                 android:textSize="@dimen/_8ssp" />
             <TextView

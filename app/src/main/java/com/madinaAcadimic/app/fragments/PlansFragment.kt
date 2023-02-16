@@ -38,6 +38,21 @@ class PlansFragment : Fragment() {
         })
 
 
+
+        fragmentPlansBinding.tvCurrentPlan.setOnClickListener {
+            fragmentPlansBinding.tvCurrentPlan.setTextColor(resources.getColor(R.color.primary_color))
+            fragmentPlansBinding.tvCompletePlan.setTextColor(resources.getColor(R.color.sub_text_color))
+            fragmentPlansBinding.vCurrentPlan.visibility = View.VISIBLE
+            fragmentPlansBinding.vCompletePlan.visibility = View.GONE
+
+        }
+        fragmentPlansBinding.tvCompletePlan.setOnClickListener {
+            fragmentPlansBinding.tvCompletePlan.setTextColor(resources.getColor(R.color.primary_color))
+            fragmentPlansBinding.tvCurrentPlan.setTextColor(resources.getColor(R.color.sub_text_color))
+            fragmentPlansBinding.vCompletePlan.visibility = View.VISIBLE
+            fragmentPlansBinding.vCurrentPlan.visibility = View.GONE
+
+        }
         fragmentPlansBinding.llAdd.setOnClickListener {
             startActivity(Intent(requireContext(),AddPlanActivity::class.java))
         }

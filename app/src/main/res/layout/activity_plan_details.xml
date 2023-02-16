@@ -276,21 +276,23 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/textView106"
+                        android:id="@+id/tvHeaderDetails"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:drawableStart="@drawable/ic_details"
                         android:fontFamily="@font/cairo_bold"
                         android:gravity="center_horizontal"
                         android:text="@string/details"
+                        android:textColor="@color/primary_color"
                         android:textSize="@dimen/_10ssp" />
 
                     <View
+                        android:id="@+id/vHeaderDetails"
                         android:layout_width="match_parent"
                         android:layout_height="2dp"
                         android:layout_marginTop="4dp"
                         android:background="@color/primary_color"
-                        android:visibility="invisible" />
+                        android:visibility="visible" />
                 </LinearLayout>
 
                 <View
@@ -307,7 +309,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/textView121"
+                        android:id="@+id/tvHeaderCompleted"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:drawableStart="@drawable/ic_completed"
@@ -316,6 +318,7 @@
                         android:text="@string/completedA" />
 
                     <View
+                        android:id="@+id/vHeaderCompleted"
                         android:layout_width="match_parent"
                         android:layout_height="2dp"
                         android:layout_marginTop="4dp"
@@ -337,7 +340,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/textView108"
+                        android:id="@+id/tvHeaderRemaining"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:drawableStart="@drawable/ic_remaning"
@@ -347,6 +350,7 @@
                         android:text="@string/remaining" />
 
                     <View
+                        android:id="@+id/vHeaderRemaining"
                         android:layout_width="match_parent"
                         android:layout_height="2dp"
                         android:layout_marginTop="4dp"
@@ -369,7 +373,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/textView109"
+                        android:id="@+id/tvHeaderSession"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:drawableStart="@drawable/ic_session"
@@ -379,10 +383,12 @@
                         android:text="@string/sessions" />
 
                     <View
+                        android:id="@+id/vHeaderSession"
                         android:layout_width="match_parent"
                         android:layout_height="2dp"
                         android:layout_marginTop="4dp"
-                        android:background="@color/primary_color" />
+                        android:background="@color/primary_color"
+                        android:visibility="gone" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -397,6 +403,7 @@
                     android:id="@+id/clSessions"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:visibility="gone"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/constraintLayout3">
@@ -862,7 +869,7 @@
                     android:id="@+id/clDetails"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:visibility="gone"
+                    android:visibility="visible"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/constraintLayout3">

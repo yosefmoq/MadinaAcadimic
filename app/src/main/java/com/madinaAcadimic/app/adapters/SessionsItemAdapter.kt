@@ -1,7 +1,5 @@
 package com.madinaAcadimic.app.adapters
 
-import android.content.Intent
-import android.media.Image
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,10 +10,8 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import antonkozyriatskyi.circularprogressindicator.CircularProgressIndicator
 import com.madinaAcadimic.app.R
-import com.madinaAcadimic.app.activities.TeacherDetailsActivity
-import org.w3c.dom.Text
 
-class SimpleAdapter(var id:Int,var itemCountA:Int = 10,var onItemClickListener:OnItemClickListener=  object :OnItemClickListener{
+class SessionsItemAdapter(var id:Int, var itemCountA:Int = 10, var onItemClickListener:OnItemClickListener=  object :OnItemClickListener{
 
     override fun onItemClick(position: Int) {
 
@@ -26,7 +22,7 @@ class SimpleAdapter(var id:Int,var itemCountA:Int = 10,var onItemClickListener:O
     }
 
 
-},var data:ArrayList<String> = arrayListOf()): RecyclerView.Adapter<SimpleAdapter.ViewHolder>() {
+}, var data:ArrayList<String> = arrayListOf()): RecyclerView.Adapter<SessionsItemAdapter.ViewHolder>() {
     class ViewHolder(var view: View):RecyclerView.ViewHolder(view)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder =
@@ -36,31 +32,6 @@ class SimpleAdapter(var id:Int,var itemCountA:Int = 10,var onItemClickListener:O
         itemCountA
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        if(data.isNotEmpty()){
-            val textView = holder.view.findViewById<TextView>(R.id.tvAgeCategory)
-            textView.text = data[position]
-            if(position ==0 ){
-                textView.background = ContextCompat.getDrawable(holder.view.context,R.drawable.bg_text_green)
-            }else{
-                textView.background = ContextCompat.getDrawable(holder.view.context,R.drawable.bg_text_gray)
-            }
-        }
-
-        try {
-            val progress = holder.view.findViewById<CircularProgressIndicator>(R.id.cpBalance)
-            val ivProgress = holder.view.findViewById<ImageView>(R.id.ivProgress)
-            if(position%2 == 0){
-                ivProgress.setImageResource(R.drawable.ic_new_progress)
-            }else{
-                ivProgress.setImageResource(R.drawable.ic_progress_red)
-
-            }
-            progress.maxProgress = 100.0
-            progress.setCurrentProgress(15.0)
-        }catch (e:java.lang.Exception){
-
-        }
-
 
 
 
@@ -77,14 +48,6 @@ class SimpleAdapter(var id:Int,var itemCountA:Int = 10,var onItemClickListener:O
 
         }
 
-        try {
-            val tvTeachers = holder.view.findViewById<TextView>(R.id.tvTeacher)
-            tvTeachers.setOnClickListener {
-                holder.view.context.startActivity(Intent(holder.view.context,TeacherDetailsActivity::class.java))
-            }
-        }catch (e:Exception){
-
-        }
 
 
         try {

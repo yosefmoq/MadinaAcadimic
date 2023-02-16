@@ -10,15 +10,7 @@ import com.madinaAcadimic.app.adapters.SimpleAdapter
 import com.madinaAcadimic.app.databinding.FragmentChargeFinanciesBinding
 import com.madinaAcadimic.app.databinding.FragmentPurchasesFinancesBinding
 
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [PurchasesFinancesFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class PurchasesFinancesFragment : Fragment() {
 
     lateinit var binding : FragmentPurchasesFinancesBinding
@@ -26,7 +18,7 @@ class PurchasesFinancesFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
 
         binding = FragmentPurchasesFinancesBinding.inflate(layoutInflater,container,false)
 
@@ -38,7 +30,12 @@ class PurchasesFinancesFragment : Fragment() {
 
         binding.rvSessions.adapter = SimpleAdapter(R.layout.item_purchases_financial_report,6)
         binding.ivFilter.setOnClickListener {
-            FinancesFilterFragment().show(childFragmentManager,"FinancesFilterFragment")
+            val financeFilterFragment = FinancesFilterFragment()
+            val bundle = Bundle()
+            bundle.putInt("type", 1)
+            financeFilterFragment.arguments = bundle
+            financeFilterFragment.show(childFragmentManager, "FinancesFilterFragment")
+
         }
 
     }

@@ -24,7 +24,7 @@
             android:paddingBottom="@dimen/_6sdp">
 
             <TextView
-                android:id="@+id/textView41"
+                android:id="@+id/tvVideoCall"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/_6sdp"
@@ -37,11 +37,12 @@
                 android:text="@string/video_call"
                 android:textColor="@color/white"
                 android:textSize="@dimen/_8ssp"
+                android:visibility="gone"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/textView40" />
+                app:layout_constraintTop_toTopOf="@+id/tvAvailable" />
 
             <TextView
-                android:id="@+id/textView42"
+                android:id="@+id/tvCall"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
@@ -54,8 +55,9 @@
                 android:text="@string/voice_call"
                 android:textColor="@color/white"
                 android:textSize="@dimen/_8ssp"
-                app:layout_constraintEnd_toStartOf="@+id/textView41"
-                app:layout_constraintTop_toTopOf="@+id/textView40" />
+                android:visibility="gone"
+                app:layout_constraintEnd_toStartOf="@+id/tvVideoCall"
+                app:layout_constraintTop_toTopOf="@+id/tvAvailable" />
 
             <com.makeramen.roundedimageview.RoundedImageView
                 android:id="@+id/imageView1"
@@ -78,20 +80,21 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_12sdp"
                 android:fontFamily="@font/cairo_bold"
-                android:text="إسماعيل محمد عبد الستار"
+                android:text="@string/ismail"
                 android:textColor="@color/black"
                 android:textSize="@dimen/_10ssp"
                 app:layout_constraintStart_toEndOf="@+id/imageView1"
                 app:layout_constraintTop_toTopOf="@+id/imageView1" />
 
             <ImageView
-                android:id="@+id/imageView19"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:id="@+id/ivHeart"
+                android:layout_width="@dimen/_16sdp"
+                android:layout_height="@dimen/_16sdp"
                 android:layout_marginTop="@dimen/_8sdp"
                 android:layout_marginEnd="@dimen/_8sdp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/primary_color"
                 app:srcCompat="@drawable/ic_favorite_wborder" />
 
             <TextView
@@ -102,7 +105,7 @@
                 android:fontFamily="@font/cairo_medium"
                 android:gravity="center_vertical"
 
-                android:text="رواية حفص عن عاصم"
+                android:text="@string/rewayet_hafs"
                 android:textSize="@dimen/_8ssp"
                 app:drawableStartCompat="@drawable/ic_quraan"
                 app:layout_constraintStart_toStartOf="@+id/textView37"
@@ -114,7 +117,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:drawablePadding="@dimen/_6sdp"
-                android:text="العربية"
+                android:text="@string/arabic"
                 android:textSize="@dimen/_8ssp"
                 app:drawableStartCompat="@drawable/ic_language"
                 app:layout_constraintStart_toStartOf="@+id/textView38"
@@ -140,7 +143,21 @@
                 app:layout_constraintTop_toBottomOf="@+id/imageView20" />
 
             <TextView
-                android:id="@+id/textView40"
+                android:id="@+id/tvAvalibleLater"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/bg_red_unavalible"
+                android:paddingHorizontal="@dimen/_3sdp"
+                android:text="@string/available_later"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_8ssp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+            <TextView
+                android:id="@+id/tvAvailable"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_8sdp"
@@ -153,6 +170,27 @@
                 android:textSize="@dimen/_8ssp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+            <TextView
+                android:id="@+id/tvNotifyMe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/bg_notify_avalible"
+                android:drawableStart="@drawable/ic_notify"
+                android:drawablePadding="8dp"
+                android:fontFamily="@font/cairo_semi_bold"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="3dp"
+                android:text="@string/notify_when_available"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_8ssp"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/divider" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 

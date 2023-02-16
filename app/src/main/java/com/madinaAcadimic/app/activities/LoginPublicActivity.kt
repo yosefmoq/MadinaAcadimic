@@ -7,11 +7,18 @@ import com.madinaAcadimic.app.MainActivity
 import com.madinaAcadimic.app.R
 import com.madinaAcadimic.app.constants.Constants
 import com.madinaAcadimic.app.databinding.ActivityLoginPublicBinding
+import com.mukesh.countrypicker.CountryPicker
 
 class LoginPublicActivity : AppCompatActivity() {
     lateinit var activityLoginPublicBinding: ActivityLoginPublicBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        val builder = CountryPicker.Builder().with(this@LoginPublicActivity)
+            .listener {
+                activityLoginPublicBinding.include2.ivFlag.setImageResource(it.flag)
+                activityLoginPublicBinding.include2.tvCountryCode.text = it.dialCode
+            }
         activityLoginPublicBinding = ActivityLoginPublicBinding.inflate(layoutInflater,null,false)
         setContentView(activityLoginPublicBinding.root)
 
@@ -28,6 +35,10 @@ class LoginPublicActivity : AppCompatActivity() {
         }
         activityLoginPublicBinding.tvForgetPassword.setOnClickListener {
             startActivity(Intent(this@LoginPublicActivity,ChangePasswordActivity::class.java))
+        }
+
+        activityLoginPublicBinding.include2.vPhoneNumber.setOnClickListener {
+            builder.build().showDialog(this@LoginPublicActivity)
         }
     }
 }

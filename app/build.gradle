@@ -60,5 +60,6 @@ dependencies {
     implementation 'com.google.android.flexbox:flexbox:3.0.0'
     implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
     implementation 'im.dacer:AndroidCharts:1.0.4'
+    implementation 'com.github.madappstechnologies:country-picker-android:2.0.4'
 
 }

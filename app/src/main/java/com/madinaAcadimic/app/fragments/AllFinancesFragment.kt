@@ -11,14 +11,14 @@ import com.madinaAcadimic.app.databinding.FragmentAllFinancesBinding
 
 class AllFinancesFragment : Fragment() {
 
-    lateinit var binding : FragmentAllFinancesBinding
+    lateinit var binding: FragmentAllFinancesBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
 
-        binding = FragmentAllFinancesBinding.inflate(layoutInflater,container,false)
+        binding = FragmentAllFinancesBinding.inflate(layoutInflater, container, false)
 
         return binding.root
     }
@@ -26,10 +26,15 @@ class AllFinancesFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.rvSessions.adapter = SimpleAdapter(R.layout.item_all_financial_report,6)
+        binding.rvSessions.adapter = SimpleAdapter(R.layout.item_all_financial_report, 6)
 
         binding.ivFilter.setOnClickListener {
-            FinancesFilterFragment().show(childFragmentManager,"FinancesFilterFragment")
+
+            val financeFilterFragment = FinancesFilterFragment()
+            val bundle = Bundle()
+            bundle.putInt("type", 1)
+            financeFilterFragment.arguments = bundle
+            financeFilterFragment.show(childFragmentManager, "FinancesFilterFragment")
         }
     }
 

@@ -84,7 +84,7 @@
         app:layout_constraintTop_toBottomOf="@+id/view">
 
         <TextView
-            android:id="@+id/textView79"
+            android:id="@+id/tvCurrentPlan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
@@ -97,7 +97,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <View
-            android:id="@+id/divider5"
+            android:id="@+id/vCurrentPlan"
             android:layout_width="0dp"
             android:layout_height="3dp"
             android:layout_marginStart="-10dp"
@@ -105,12 +105,26 @@
             android:layout_marginTop="@dimen/_8sdp"
             android:layout_marginEnd="-10dp"
             android:background="@drawable/bg_green_button"
-            app:layout_constraintEnd_toEndOf="@+id/textView79"
-            app:layout_constraintStart_toStartOf="@+id/textView79"
-            app:layout_constraintTop_toBottomOf="@+id/textView79" />
+            app:layout_constraintEnd_toEndOf="@+id/tvCurrentPlan"
+            app:layout_constraintStart_toStartOf="@+id/tvCurrentPlan"
+            app:layout_constraintTop_toBottomOf="@+id/tvCurrentPlan" />
+
+        <View
+            android:id="@+id/vCompletePlan"
+            android:layout_width="0dp"
+            android:layout_height="3dp"
+
+            android:layout_marginStart="-10dp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginEnd="-10dp"
+            android:background="@drawable/bg_green_button"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@+id/tvCompletePlan"
+            app:layout_constraintStart_toStartOf="@+id/tvCompletePlan"
+            app:layout_constraintTop_toBottomOf="@+id/tvCurrentPlan" />
 
         <TextView
-            android:id="@+id/textView80"
+            android:id="@+id/tvCompletePlan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_24sdp"

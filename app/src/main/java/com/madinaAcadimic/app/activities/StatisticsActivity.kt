@@ -8,11 +8,13 @@ import android.os.Bundle
 import android.view.View
 import android.view.ViewGroup
 import android.view.Window
+import androidx.core.view.get
 import com.github.mikephil.charting.components.Description
 import com.github.mikephil.charting.data.BarData
 import com.github.mikephil.charting.data.BarDataSet
 import com.github.mikephil.charting.data.BarEntry
 import com.github.mikephil.charting.utils.ColorTemplate
+import com.madinaAcadimic.app.MainActivity
 import com.madinaAcadimic.app.R
 import com.madinaAcadimic.app.adapters.OnItemClickListener
 import com.madinaAcadimic.app.adapters.StatisticsAdapter
@@ -64,9 +66,7 @@ class StatisticsActivity : AppCompatActivity() {
         activityStatisticsBinding.rvStatisticYears.adapter = StatisticsAdapter(this@StatisticsActivity,monthsData,object:OnItemClickListener{
             override fun onItemClick(position: Int) {
                 showDailyAllDialog()
-
             }
-
             override fun onViewClicked(viewID: Int) {
 
             }
@@ -78,19 +78,46 @@ class StatisticsActivity : AppCompatActivity() {
         activityStatisticsBinding.cvAll.setOnClickListener {
             showDailyAllDialog()
         }
+
+
         activityStatisticsBinding.cvToday.setOnClickListener {
             showDailyAllDialog()
         }
+
+
         activityStatisticsBinding.cvMonth.setOnClickListener {
             showMonthYearDialog()
         }
 
+
         activityStatisticsBinding.cvYear.setOnClickListener {
             showMonthYearDialog()
-
         }
 
 
+        activityStatisticsBinding.bnv.setOnItemSelectedListener {
+            finish()
+            when(it.itemId){
+                R.id.navHome->{
+                    MainActivity.activityMainBinding.vp.currentItem = 0
+                }
+                R.id.navTeachers->{
+                    MainActivity.activityMainBinding.vp.currentItem = 1
+                }
+                R.id.navPlans->{
+                    MainActivity.activityMainBinding.vp.currentItem = 2
+                }
+                R.id.navSessions->{
+                    MainActivity.activityMainBinding.vp.currentItem = 3
+                }
+                R.id.navAccount->{
+                    MainActivity.activityMainBinding.vp.currentItem = 4
+                }
+
+            }
+            true
+        }
+        activityStatisticsBinding.bnv.menu[4].isChecked = true
 
     }
 
@@ -148,5 +175,7 @@ class StatisticsActivity : AppCompatActivity() {
         dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT));
 
         dialog.show()
+
+
     }
 }

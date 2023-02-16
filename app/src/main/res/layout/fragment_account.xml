@@ -72,11 +72,12 @@
             android:id="@+id/textView14"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="4dp"
             android:fontFamily="@font/cairo_medium"
             android:text="50 123 123"
             android:textColor="#000000"
-            app:layout_constraintStart_toStartOf="@+id/tvName"
+            app:layout_constraintStart_toEndOf="@+id/textView53"
             app:layout_constraintTop_toBottomOf="@+id/tvName" />
 
         <TextView
@@ -88,7 +89,7 @@
 
             android:textColor="@color/darker_green_color"
             app:layout_constraintBottom_toBottomOf="@+id/textView14"
-            app:layout_constraintStart_toEndOf="@+id/textView14"
+            app:layout_constraintStart_toStartOf="@+id/tvName"
             app:layout_constraintTop_toTopOf="@+id/textView14" />
 
         <TextView
@@ -99,7 +100,7 @@
             android:fontFamily="@font/cairo_bold"
             android:text="test.test!@gmail.com"
             android:textColor="@color/sub_text_color"
-            app:layout_constraintStart_toStartOf="@+id/textView14"
+            app:layout_constraintStart_toStartOf="@+id/tvName"
             app:layout_constraintTop_toBottomOf="@+id/textView14" />
 
         <TextView

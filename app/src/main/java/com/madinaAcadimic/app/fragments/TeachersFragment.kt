@@ -16,6 +16,7 @@ import com.madinaAcadimic.app.R
 import com.madinaAcadimic.app.activities.TeacherDetailsActivity
 import com.madinaAcadimic.app.adapters.OnItemClickListener
 import com.madinaAcadimic.app.adapters.SimpleAdapter
+import com.madinaAcadimic.app.adapters.TeacherRowAdapter
 import com.madinaAcadimic.app.databinding.DialogTeacherFilterBinding
 import com.madinaAcadimic.app.databinding.FragmentTeachersBinding
 
@@ -27,9 +28,10 @@ class TeachersFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View{
         fragmentTeachersBinding = FragmentTeachersBinding.inflate(inflater,container,false)
-        fragmentTeachersBinding.rvTeachers.adapter = SimpleAdapter(R.layout.item_teacher_row,10, onItemClickListener = object:OnItemClickListener{
+        fragmentTeachersBinding.rvTeachers.adapter =TeacherRowAdapter(requireContext(),object:OnItemClickListener{
             override fun onItemClick(position: Int) {
-                startActivity(Intent(requireContext(),TeacherDetailsActivity::class.java))
+                startActivity(Intent(requireContext(),TeacherDetailsActivity::class.java).putExtra("avalible",position%2 == 0))
+
             }
 
             override fun onViewClicked(viewID: Int) {

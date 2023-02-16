@@ -45,13 +45,13 @@ class MainFragment : Fragment() {
 
         })
         fragmentMainBinding.tvAll.setOnClickListener {
-            (requireActivity() as MainActivity).activityMainBinding.vp.currentItem = 1
-            (requireActivity() as MainActivity).activityMainBinding.bnv.menu[1].isChecked = true
+            MainActivity.activityMainBinding.vp.currentItem = 1
+            MainActivity.activityMainBinding.bnv.menu[1].isChecked = true
 
         }
         fragmentMainBinding.tvAllPlans.setOnClickListener {
-            (requireActivity() as MainActivity).activityMainBinding.vp.currentItem = 2
-            (requireActivity() as MainActivity).activityMainBinding.bnv.menu[2].isChecked = true
+            MainActivity.activityMainBinding.vp.currentItem = 2
+            MainActivity.activityMainBinding.bnv.menu[2].isChecked = true
 
         }
         fragmentMainBinding.tvRecharge.setOnClickListener {

@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.madinaAcadimic.app.R
 import com.madinaAcadimic.app.databinding.ActivitySignupBinding
+import com.mukesh.countrypicker.CountryPicker
 
 class SignupActivity : AppCompatActivity() {
     lateinit var activitySignupBinding:ActivitySignupBinding
@@ -18,5 +19,14 @@ class SignupActivity : AppCompatActivity() {
         activitySignupBinding.llSignIn.setOnClickListener {
             startActivity(Intent(this@SignupActivity,LoginPublicActivity::class.java))
         }
+        val builder = CountryPicker.Builder().with(this@SignupActivity)
+            .listener {
+                activitySignupBinding.include.ivFlag.setImageResource(it.flag)
+                activitySignupBinding.include.tvCountryCode.text = it.dialCode
+            }
+        activitySignupBinding.include.vPhoneNumber.setOnClickListener {
+            builder.build().showDialog(this@SignupActivity)
+        }
+
     }
 }

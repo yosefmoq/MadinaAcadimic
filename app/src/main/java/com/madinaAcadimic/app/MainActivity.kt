@@ -10,9 +10,10 @@ import com.madinaAcadimic.app.databinding.ActivityMainBinding
 import com.madinaAcadimic.app.fragments.*
 
 class MainActivity : AppCompatActivity() {
-    lateinit var activityMainBinding:ActivityMainBinding
     companion object{
         var userType = Constants.USER
+        lateinit var activityMainBinding:ActivityMainBinding
+
     }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,6 +23,7 @@ class MainActivity : AppCompatActivity() {
         userType = intent.getStringExtra(Constants.USER_TYPE)!!
 
 
+        activityMainBinding.vp.isUserInputEnabled = false
         val myBottomNavigationAdapter = MyBottomNavigationAdapter(this@MainActivity)
         activityMainBinding.vp.adapter = myBottomNavigationAdapter
 

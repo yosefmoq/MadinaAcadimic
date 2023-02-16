@@ -66,7 +66,21 @@
                 app:srcCompat="@drawable/ic_favorite_wborder" />
 
             <TextView
-                android:id="@+id/textView135"
+                android:id="@+id/tvAvailable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_text_green"
+                android:paddingHorizontal="@dimen/_4sdp"
+                android:paddingVertical="@dimen/_2sdp"
+                android:text="@string/avalible"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_8ssp"
+                app:layout_constraintBottom_toBottomOf="@+id/tvAvalibleLater"
+                app:layout_constraintStart_toStartOf="@+id/circleImageView"
+                app:layout_constraintTop_toTopOf="@+id/tvAvalibleLater" />
+
+            <TextView
+                android:id="@+id/tvAvalibleLater"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_red_unavalible"
@@ -127,7 +141,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView137" />
 
             <TextView
-                android:id="@+id/editTextTextPersonName16"
+                android:id="@+id/etPreferedRewaya"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="25dp"
@@ -177,8 +191,8 @@
                 android:text="@string/hafs_an_assim"
                 android:textColor="@color/black"
                 android:textSize="@dimen/_9ssp"
-                app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName16"
-                app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName16" />
+                app:layout_constraintStart_toStartOf="@+id/etPreferedRewaya"
+                app:layout_constraintTop_toBottomOf="@+id/etPreferedRewaya" />
 
             <TextView
                 android:id="@+id/textView143"
@@ -188,7 +202,7 @@
                 android:text="@string/arabic"
                 android:textColor="@color/black"
                 android:textSize="@dimen/_9ssp"
-                app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName16"
+                app:layout_constraintStart_toStartOf="@+id/etPreferedRewaya"
                 app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName14" />
 
             <TextView
@@ -199,20 +213,21 @@
                 android:text="All Categories"
                 android:textColor="@color/black"
                 android:textSize="@dimen/_9ssp"
-                app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName16"
+                app:layout_constraintStart_toStartOf="@+id/etPreferedRewaya"
                 app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName17" />
 
             <LinearLayout
+                android:id="@+id/llCalls"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
                 android:orientation="horizontal"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/textView155">
+                app:layout_constraintTop_toTopOf="@+id/tvNotifyMe">
 
                 <TextView
-                    android:id="@+id/textView42"
+                    android:id="@+id/tvCall"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="8dp"
@@ -227,7 +242,7 @@
                     android:textSize="@dimen/_8ssp" />
 
                 <TextView
-                    android:id="@+id/textView41"
+                    android:id="@+id/tvVideoCall"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/bg_text_darker_green"
@@ -243,7 +258,7 @@
             </LinearLayout>
 
             <TextView
-                android:id="@+id/textView155"
+                android:id="@+id/tvNotifyMe"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
@@ -270,7 +285,7 @@
                 android:orientation="horizontal"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView155">
+                app:layout_constraintTop_toBottomOf="@+id/tvNotifyMe">
 
                 <TextView
                     android:id="@+id/textView156"
@@ -305,5 +320,15 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bnv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:menu="@menu/main_menu"
+
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
