@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/navHome">
+
+    <fragment
+        android:id="@+id/navHome"
+        android:name="com.madinaAcadimic.app.fragments.MainFragment"
+        android:label="MainFragment" >
+        <action
+            android:id="@+id/action_navHome_to_notificationFragment"
+            app:destination="@id/notificationFragment" />
+        <action
+            android:id="@+id/action_navHome_to_navTeachers"
+            app:destination="@id/navTeachers" />
+        <action
+            android:id="@+id/action_navHome_to_navPlans"
+            app:destination="@id/navPlans" />
+    </fragment>
+    <fragment
+        android:id="@+id/navTeachers"
+        android:name="com.madinaAcadimic.app.fragments.TeachersFragment"
+        android:label="TeachersFragment" >
+        <action
+            android:id="@+id/action_navTeachers_to_teacherDetailsActivity"
+            app:destination="@id/teacherDetailsActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/navPlans"
+        android:name="com.madinaAcadimic.app.fragments.PlansFragment"
+        android:label="fragment_plans"
+        tools:layout="@layout/fragment_plans" >
+        <action
+            android:id="@+id/action_navPlans_to_addPlanFragment"
+            app:destination="@id/addPlanFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/navSessions"
+        android:name="com.madinaAcadimic.app.fragments.SessionsFragment"
+        android:label="SessionsFragment" >
+        <action
+            android:id="@+id/action_navSessions_to_teacherDetailsActivity"
+            app:destination="@id/teacherDetailsActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/navAccount"
+        android:name="com.madinaAcadimic.app.fragments.AccountFragment"
+        android:label="fragment_account"
+        tools:layout="@layout/fragment_account" >
+        <action
+            android:id="@+id/action_navAccount_to_accountInformationFragment"
+            app:destination="@id/accountInformationFragment" />
+        <action
+            android:id="@+id/action_navAccount_to_statisticsActivity"
+            app:destination="@id/statisticsActivity" />
+        <action
+            android:id="@+id/action_navAccount_to_financialFragment"
+            app:destination="@id/financialFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/notificationFragment"
+        android:name="com.madinaAcadimic.app.fragments.NotificationFragment"
+        android:label="activity_notification"
+        tools:layout="@layout/fragment_notification" />
+    <fragment
+        android:id="@+id/teacherDetailsActivity"
+        android:name="com.madinaAcadimic.app.fragments.TeacherDetailsFragment"
+        android:label="activity_teacher_details"
+        tools:layout="@layout/fragment_teacher_details" />
+    <fragment
+        android:id="@+id/accountInformationFragment"
+        android:name="com.madinaAcadimic.app.fragments.AccountInformationFragment"
+        android:label="AccountInformationFragment" />
+    <fragment
+        android:id="@+id/statisticsActivity"
+        android:name="com.madinaAcadimic.app.fragments.StatisticsFragment"
+        android:label="activity_statistics"
+        tools:layout="@layout/fragment_statistics" />
+    <fragment
+        android:id="@+id/financialFragment"
+        android:name="com.madinaAcadimic.app.fragments.FinancialFragment"
+        android:label="fragment_financial"
+        tools:layout="@layout/fragment_financial" />
+    <fragment
+        android:id="@+id/addPlanFragment"
+        android:name="com.madinaAcadimic.app.fragments.AddPlanFragment"
+        android:label="fragment_add_plan"
+        tools:layout="@layout/fragment_add_plan" />
+
+
+</navigation>

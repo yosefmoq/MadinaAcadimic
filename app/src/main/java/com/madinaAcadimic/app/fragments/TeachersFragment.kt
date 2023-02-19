@@ -1,6 +1,5 @@
 package com.madinaAcadimic.app.fragments
 import android.app.Dialog
-import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
@@ -9,11 +8,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.Window
+import androidx.navigation.fragment.findNavController
 import com.google.android.flexbox.FlexDirection
 import com.google.android.flexbox.FlexboxLayoutManager
 import com.google.android.flexbox.JustifyContent
 import com.madinaAcadimic.app.R
-import com.madinaAcadimic.app.activities.TeacherDetailsActivity
 import com.madinaAcadimic.app.adapters.OnItemClickListener
 import com.madinaAcadimic.app.adapters.SimpleAdapter
 import com.madinaAcadimic.app.adapters.TeacherRowAdapter
@@ -30,7 +29,8 @@ class TeachersFragment : Fragment() {
         fragmentTeachersBinding = FragmentTeachersBinding.inflate(inflater,container,false)
         fragmentTeachersBinding.rvTeachers.adapter =TeacherRowAdapter(requireContext(),object:OnItemClickListener{
             override fun onItemClick(position: Int) {
-                startActivity(Intent(requireContext(),TeacherDetailsActivity::class.java).putExtra("avalible",position%2 == 0))
+
+                findNavController().navigate(R.id.action_navTeachers_to_teacherDetailsActivity)
 
             }
 

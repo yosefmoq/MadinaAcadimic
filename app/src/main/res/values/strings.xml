@@ -228,6 +228,7 @@
     <string name="account_information">Account Information</string>
     <string name="programs">Programs</string>
     <string name="path">Path</string>
+    <string name="balance_after_recharge">Balance after recharge</string>
 
 
 </resources>

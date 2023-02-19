@@ -1,36 +1,36 @@
-package com.madinaAcadimic.app.activities
+package com.madinaAcadimic.app.fragments
 
 import android.app.Dialog
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.Window
-import androidx.core.view.get
-import com.github.mikephil.charting.components.Description
-import com.github.mikephil.charting.data.BarData
-import com.github.mikephil.charting.data.BarDataSet
-import com.github.mikephil.charting.data.BarEntry
-import com.github.mikephil.charting.utils.ColorTemplate
-import com.madinaAcadimic.app.MainActivity
+import androidx.fragment.app.Fragment
 import com.madinaAcadimic.app.R
 import com.madinaAcadimic.app.adapters.OnItemClickListener
 import com.madinaAcadimic.app.adapters.StatisticsAdapter
-import com.madinaAcadimic.app.databinding.ActivityStatisticsBinding
-import com.madinaAcadimic.app.databinding.DialogConfirmBinding
 import com.madinaAcadimic.app.databinding.DialogStatisticsBinding
 import com.madinaAcadimic.app.databinding.DialogStatisticsMonthBinding
+import com.madinaAcadimic.app.databinding.FragmentStatisticsBinding
 import com.madinaAcadimic.app.models.Statistics
-import im.dacer.androidcharts.BarView
 
-class StatisticsActivity : AppCompatActivity() {
-    lateinit var activityStatisticsBinding: ActivityStatisticsBinding
+class StatisticsFragment : Fragment() {
+    lateinit var binding: FragmentStatisticsBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        activityStatisticsBinding = ActivityStatisticsBinding.inflate(layoutInflater, null, false)
-        setContentView(activityStatisticsBinding.root)
+
+    }
+
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
+
+        binding = FragmentStatisticsBinding.inflate(layoutInflater, container, false)
 
         val dailyData = arrayListOf<Statistics>()
         dailyData.add(Statistics(1,"Sunday","17 shawal",90, Color.parseColor("#80067211")))
@@ -41,7 +41,7 @@ class StatisticsActivity : AppCompatActivity() {
         dailyData.add(Statistics(1,"Sunday","17 shawal",60, Color.parseColor("#067211")))
         dailyData.add(Statistics(1,"Sunday","17 shawal",10, Color.parseColor("#33067211")))
 
-        activityStatisticsBinding.rvStatisticMonths.adapter = StatisticsAdapter(this@StatisticsActivity,dailyData,object:OnItemClickListener{
+        binding.rvStatisticMonths.adapter = StatisticsAdapter(requireContext(),dailyData,object:OnItemClickListener{
             override fun onItemClick(position: Int) {
                 showDailyAllDialog()
             }
@@ -50,8 +50,8 @@ class StatisticsActivity : AppCompatActivity() {
 
             }
         })
-        activityStatisticsBinding.tvStatistics.setOnClickListener {
-            finish()
+        binding.tvStatistics.setOnClickListener {
+            requireActivity().onBackPressed()
         }
 
 
@@ -63,7 +63,7 @@ class StatisticsActivity : AppCompatActivity() {
         monthsData.add(Statistics(1,"Ramadhan","",90,Color.parseColor("#99067211")))
         monthsData.add(Statistics(1,"Shawal","",80,Color.parseColor("#99067211")))
 
-        activityStatisticsBinding.rvStatisticYears.adapter = StatisticsAdapter(this@StatisticsActivity,monthsData,object:OnItemClickListener{
+        binding.rvStatisticYears.adapter = StatisticsAdapter(requireContext(),monthsData,object:OnItemClickListener{
             override fun onItemClick(position: Int) {
                 showDailyAllDialog()
             }
@@ -75,54 +75,29 @@ class StatisticsActivity : AppCompatActivity() {
 
 
 
-        activityStatisticsBinding.cvAll.setOnClickListener {
+        binding.cvAll.setOnClickListener {
             showDailyAllDialog()
         }
 
 
-        activityStatisticsBinding.cvToday.setOnClickListener {
+        binding.cvToday.setOnClickListener {
             showDailyAllDialog()
         }
 
 
-        activityStatisticsBinding.cvMonth.setOnClickListener {
+        binding.cvMonth.setOnClickListener {
             showMonthYearDialog()
         }
 
 
-        activityStatisticsBinding.cvYear.setOnClickListener {
+        binding.cvYear.setOnClickListener {
             showMonthYearDialog()
         }
-
-
-        activityStatisticsBinding.bnv.setOnItemSelectedListener {
-            finish()
-            when(it.itemId){
-                R.id.navHome->{
-                    MainActivity.activityMainBinding.vp.currentItem = 0
-                }
-                R.id.navTeachers->{
-                    MainActivity.activityMainBinding.vp.currentItem = 1
-                }
-                R.id.navPlans->{
-                    MainActivity.activityMainBinding.vp.currentItem = 2
-                }
-                R.id.navSessions->{
-                    MainActivity.activityMainBinding.vp.currentItem = 3
-                }
-                R.id.navAccount->{
-                    MainActivity.activityMainBinding.vp.currentItem = 4
-                }
-
-            }
-            true
-        }
-        activityStatisticsBinding.bnv.menu[4].isChecked = true
-
+    
+        return binding.root
     }
-
     fun showDailyAllDialog(){
-        val dialog = Dialog(this@StatisticsActivity, R.style.MyRounded_MaterialComponents_MaterialAlertDialog)
+        val dialog = Dialog(requireContext(), R.style.MyRounded_MaterialComponents_MaterialAlertDialog)
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
         val dialogConfirmBinding = DialogStatisticsBinding.inflate(layoutInflater)
         dialog.setContentView(dialogConfirmBinding.root)
@@ -136,7 +111,7 @@ class StatisticsActivity : AppCompatActivity() {
 
     fun showMonthYearDialog(){
         var selectedPosition = -1;
-        val dialog = Dialog(this@StatisticsActivity, R.style.MyRounded_MaterialComponents_MaterialAlertDialog)
+        val dialog = Dialog(requireContext(), R.style.MyRounded_MaterialComponents_MaterialAlertDialog)
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
         val dialogConfirmBinding = DialogStatisticsMonthBinding.inflate(layoutInflater)
         dialog.setContentView(dialogConfirmBinding.root)
@@ -151,7 +126,7 @@ class StatisticsActivity : AppCompatActivity() {
 
         dialogConfirmBinding.tvDayTitle.text = dialogConfirmBinding.tvDayTitle.text.toString().replace(System.getProperty("line.separator"), "");
 
-        dialogConfirmBinding.rvStatisticMonths.adapter = StatisticsAdapter(this@StatisticsActivity,dailyData,object :OnItemClickListener{
+        dialogConfirmBinding.rvStatisticMonths.adapter = StatisticsAdapter(requireContext(),dailyData,object :OnItemClickListener{
             override fun onItemClick(position: Int) {
                 if(selectedPosition == position){
                     dialogConfirmBinding.clDaily.visibility = View.GONE

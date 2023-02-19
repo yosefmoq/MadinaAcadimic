@@ -6,13 +6,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.google.android.material.bottomsheet.BottomSheetDialog
-import com.madinaAcadimic.app.MainActivity
 import com.madinaAcadimic.app.R
-import com.madinaAcadimic.app.activities.AccountInformationActivity
 import com.madinaAcadimic.app.activities.ChangePasswordActivity
-import com.madinaAcadimic.app.activities.FinancialActivity
-import com.madinaAcadimic.app.activities.StatisticsActivity
 import com.madinaAcadimic.app.adapters.SimpleAdapter
 import com.madinaAcadimic.app.databinding.BottomSheetAddAccountBinding
 import com.madinaAcadimic.app.databinding.BottomSheetChangeAccountBinding
@@ -29,8 +26,6 @@ class AccountFragment : Fragment() {
         // Inflate the layout for this fragment
         fragmentAccountBinding = FragmentAccountBinding.inflate(inflater,container,false)
         return fragmentAccountBinding.root
-
-
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -43,16 +38,14 @@ class AccountFragment : Fragment() {
             showBottomSheetDialog()
         }
         fragmentAccountBinding.tvAccountInformation.setOnClickListener {
-            requireActivity().startActivity(Intent(requireContext(),AccountInformationActivity::class.java))
+            findNavController().navigate(R.id.action_navAccount_to_accountInformationFragment)
         }
         fragmentAccountBinding.tvStatistics.setOnClickListener {
-            startActivity(Intent(requireContext(),StatisticsActivity::class.java    ))
+            findNavController().navigate(R.id.action_navAccount_to_accountInformationFragment)
         }
 
         fragmentAccountBinding.tvName7.setOnClickListener {
-
-            startActivity(Intent(requireContext(),FinancialActivity::class.java    ))
-
+            findNavController().navigate(R.id.action_navAccount_to_financialFragment)
         }
 
         fragmentAccountBinding.tvChangePassword.setOnClickListener {

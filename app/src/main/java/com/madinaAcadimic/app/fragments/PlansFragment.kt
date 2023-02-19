@@ -1,14 +1,13 @@
 package com.madinaAcadimic.app.fragments
 
 import android.content.Intent
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.madinaAcadimic.app.R
-import com.madinaAcadimic.app.activities.AddPlanActivity
 import com.madinaAcadimic.app.activities.PlanDetailsActivity
 import com.madinaAcadimic.app.adapters.OnItemClickListener
 import com.madinaAcadimic.app.adapters.SimpleAdapter
@@ -24,7 +23,6 @@ class PlansFragment : Fragment() {
         return fragmentPlansBinding.root
     }
 
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -36,7 +34,6 @@ class PlansFragment : Fragment() {
             override fun onViewClicked(viewID: Int) {
             }
         })
-
 
 
         fragmentPlansBinding.tvCurrentPlan.setOnClickListener {
@@ -54,7 +51,7 @@ class PlansFragment : Fragment() {
 
         }
         fragmentPlansBinding.llAdd.setOnClickListener {
-            startActivity(Intent(requireContext(),AddPlanActivity::class.java))
+             findNavController().navigate(R.id.action_navPlans_to_addPlanFragment)
         }
 
     }
