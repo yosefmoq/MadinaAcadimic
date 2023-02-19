@@ -38,8 +38,9 @@
                 android:textColor="@color/white"
                 android:textSize="@dimen/_8ssp"
                 android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/tvNotifyMe"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/tvAvailable" />
+                app:layout_constraintTop_toTopOf="@+id/tvNotifyMe" />
 
             <TextView
                 android:id="@+id/tvCall"
@@ -56,8 +57,9 @@
                 android:textColor="@color/white"
                 android:textSize="@dimen/_8ssp"
                 android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/tvNotifyMe"
                 app:layout_constraintEnd_toStartOf="@+id/tvVideoCall"
-                app:layout_constraintTop_toTopOf="@+id/tvAvailable" />
+                app:layout_constraintTop_toTopOf="@+id/tvNotifyMe" />
 
             <com.makeramen.roundedimageview.RoundedImageView
                 android:id="@+id/imageView1"
@@ -123,24 +125,43 @@
                 app:layout_constraintStart_toStartOf="@+id/textView38"
                 app:layout_constraintTop_toBottomOf="@+id/textView38" />
 
-            <ImageView
-                android:id="@+id/imageView20"
+
+            <TextView
+                android:id="@+id/textView32"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="2dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/cairo_bold"
+                android:text="4,5"
+                android:textColor="@color/sub_text_color"
+                android:textSize="@dimen/_10ssp"
                 app:layout_constraintStart_toStartOf="@+id/textView39"
-                app:layout_constraintTop_toBottomOf="@+id/textView39"
-                app:srcCompat="@drawable/ig_rating" />
+                app:layout_constraintTop_toBottomOf="@+id/textView39" />
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                style="@style/customRatingBarSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_3sdp"
+                android:isIndicator="true"
+                android:rating="4.5"
+                android:stepSize="0.5"
+                app:layout_constraintBottom_toBottomOf="@+id/textView32"
+                app:layout_constraintStart_toEndOf="@+id/textView32"
+                app:layout_constraintTop_toTopOf="@+id/textView32" />
+
+
 
             <View
                 android:id="@+id/divider"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
+                android:layout_width="0dp"
+                android:layout_height="0.5dp"
                 android:layout_marginTop="@dimen/_10sdp"
                 android:background="@color/gray_border_color"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView20" />
+                app:layout_constraintEnd_toEndOf="@+id/tvNotifyMe"
+                app:layout_constraintStart_toStartOf="@+id/tvAvalibleLater"
+                app:layout_constraintTop_toBottomOf="@+id/ratingBar" />
 
             <TextView
                 android:id="@+id/tvAvalibleLater"
@@ -149,36 +170,36 @@
                 android:layout_marginStart="8dp"
                 android:background="@drawable/bg_red_unavalible"
                 android:paddingHorizontal="@dimen/_3sdp"
+                android:paddingVertical="@dimen/_2sdp"
                 android:text="@string/available_later"
+
                 android:textColor="@color/white"
                 android:textSize="@dimen/_8ssp"
-                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintBottom_toBottomOf="@+id/tvNotifyMe"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/divider" />
+                app:layout_constraintTop_toTopOf="@+id/tvNotifyMe" />
 
             <TextView
                 android:id="@+id/tvAvailable"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_8sdp"
-                android:layout_marginTop="@dimen/_8sdp"
                 android:background="@drawable/bg_text_green"
                 android:paddingHorizontal="@dimen/_4sdp"
                 android:paddingVertical="@dimen/_2sdp"
                 android:text="@string/avalible"
                 android:textColor="@color/white"
                 android:textSize="@dimen/_8ssp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/divider" />
+                app:layout_constraintBottom_toBottomOf="@+id/tvNotifyMe"
+                app:layout_constraintStart_toStartOf="@+id/tvAvalibleLater"
+                app:layout_constraintTop_toTopOf="@+id/tvNotifyMe" />
 
             <TextView
                 android:id="@+id/tvNotifyMe"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
+                android:layout_marginTop="@dimen/_6sdp"
                 android:layout_marginEnd="8dp"
                 android:background="@drawable/bg_notify_avalible"
-                android:drawableStart="@drawable/ic_notify"
                 android:drawablePadding="8dp"
                 android:fontFamily="@font/cairo_semi_bold"
                 android:paddingHorizontal="12dp"
@@ -189,7 +210,8 @@
                 android:visibility="visible"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/divider" />
+                app:layout_constraintTop_toBottomOf="@+id/divider"
+                app:drawableStartCompat="@drawable/ic_notify" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>

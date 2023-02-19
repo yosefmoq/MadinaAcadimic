@@ -42,6 +42,14 @@
         <item name="android:maxHeight">25dip</item>
     </style>
 
+    <style name="customRatingBarSmall" parent="Widget.AppCompat.RatingBar">
+        <item name="android:progressDrawable">@drawable/rating_bar_states_small</item>
+        <item name="android:minHeight">10dip</item>
+        <item name="android:maxHeight">10dip</item>
+    </style>
+
+
+
     <style name="tab_text" parent="@android:style/TextAppearance.Widget.TabWidget">
         <item name="android:fontFamily">@font/cairo_bold</item>
         <item name="android:textSize">@dimen/_10ssp</item>
@@ -61,5 +69,7 @@
         parent="Widget.Design.BottomSheet.Modal">
         <item name="android:background">@drawable/bg_top_radius</item>
     </style>
+
+
 
 </resources>

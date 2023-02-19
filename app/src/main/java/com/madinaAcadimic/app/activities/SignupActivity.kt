@@ -1,11 +1,13 @@
 package com.madinaAcadimic.app.activities
 
+import android.R
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
+import android.graphics.*
 import android.os.Bundle
-import com.madinaAcadimic.app.R
+import androidx.appcompat.app.AppCompatActivity
 import com.madinaAcadimic.app.databinding.ActivitySignupBinding
 import com.mukesh.countrypicker.CountryPicker
+
 
 class SignupActivity : AppCompatActivity() {
     lateinit var activitySignupBinding:ActivitySignupBinding
@@ -19,9 +21,18 @@ class SignupActivity : AppCompatActivity() {
         activitySignupBinding.llSignIn.setOnClickListener {
             startActivity(Intent(this@SignupActivity,LoginPublicActivity::class.java))
         }
+
+
+        val radius = 17 * resources.displayMetrics.density
         val builder = CountryPicker.Builder().with(this@SignupActivity)
             .listener {
-                activitySignupBinding.include.ivFlag.setImageResource(it.flag)
+
+                val bm = BitmapFactory.decodeResource(resources, it.flag)
+
+                val circular = getCircleCroppedBitmap(bm,radius)
+
+                activitySignupBinding.include.ivFlag.setImageBitmap(circular)
+
                 activitySignupBinding.include.tvCountryCode.text = it.dialCode
             }
         activitySignupBinding.include.vPhoneNumber.setOnClickListener {
@@ -29,4 +40,30 @@ class SignupActivity : AppCompatActivity() {
         }
 
     }
+
+
+    fun getCircleCroppedBitmap(bitmap: Bitmap, radius: Float): Bitmap? {
+        val output = Bitmap.createBitmap(
+            bitmap.width,
+            bitmap.height, Bitmap.Config.ARGB_8888
+        )
+        val canvas = Canvas(output)
+        val color = -0xbdbdbe
+        val paint = Paint()
+        val rect = Rect(0, 0, bitmap.width, bitmap.height)
+        paint.setAntiAlias(true)
+        canvas.drawARGB(0, 0, 0, 0)
+        paint.setColor(color)
+        // canvas.drawRoundRect(rectF, roundPx, roundPx, paint);
+        canvas.drawCircle(
+            (bitmap.width / 2).toFloat(), (bitmap.height / 2).toFloat(),
+            radius, paint
+        )
+        paint.setXfermode(PorterDuffXfermode(PorterDuff.Mode.SRC_IN))
+        canvas.drawBitmap(bitmap, rect, rect, paint)
+        //Bitmap _bmp = Bitmap.createScaledBitmap(output, 60, 60, false);
+        //return _bmp;
+        return output
+    }
+
 }

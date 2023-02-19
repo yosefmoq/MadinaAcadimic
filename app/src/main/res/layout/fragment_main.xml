@@ -347,6 +347,7 @@
             android:id="@+id/rvPlans"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false"
             android:layout_marginTop="12dp"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintEnd_toEndOf="parent"
