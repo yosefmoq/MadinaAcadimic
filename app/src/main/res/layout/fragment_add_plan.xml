@@ -164,6 +164,7 @@
         android:text="@string/naxt"
         android:textSize="@dimen/_13ssp"
         android:textColor="@color/white"
+        android:textAllCaps="false"
         android:fontFamily="@font/cairo_extra_bold"
         android:background="@drawable/bg_green_button"
         android:layout_marginHorizontal="@dimen/_28sdp"

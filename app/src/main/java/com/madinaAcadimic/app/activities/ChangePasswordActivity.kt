@@ -31,7 +31,6 @@ class ChangePasswordActivity : AppCompatActivity() {
                 }else if(confirmPassword == newPassword){
                     activityChangePasswordBinding.etConfirmPassword.background = ContextCompat.getDrawable(this@ChangePasswordActivity,R.drawable.bg_edit_text_regular_green)
                     activityChangePasswordBinding.tvError.visibility = View.GONE
-
                 }else{
                     activityChangePasswordBinding.etConfirmPassword.background = ContextCompat.getDrawable(this@ChangePasswordActivity,R.drawable.bg_edit_text_regular_red)
                     activityChangePasswordBinding.tvError.visibility = View.VISIBLE
