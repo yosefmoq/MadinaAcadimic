@@ -62,4 +62,10 @@ dependencies {
     implementation 'im.dacer:AndroidCharts:1.0.4'
     implementation 'com.github.madappstechnologies:country-picker-android:2.0.4'
 
+    def nav_version = "2.5.3"
+
+    // Kotlin
+    implementation("androidx.navigation:navigation-fragment-ktx:$nav_version")
+    implementation("androidx.navigation:navigation-ui-ktx:$nav_version")
+
 }

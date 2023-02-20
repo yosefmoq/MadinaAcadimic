@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.view.ViewGroup.LayoutParams
 import android.view.Window
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.madinaAcadimic.app.R
 import com.madinaAcadimic.app.adapters.OnItemClickListener
 import com.madinaAcadimic.app.adapters.SimpleAdapter
@@ -35,6 +36,12 @@ class SessionsFragment : Fragment() {
 
                 when(viewID){
 
+                    R.id.tvTeacher->{
+
+                        findNavController().navigate(R.id.action_navSessions_to_teacherDetailsActivity)
+
+                    }
+
                     R.id.tvRate->{
 
                         RateTeacherPopupFragment().show(childFragmentManager,"RateTeacherPopupFragment")
@@ -49,9 +56,7 @@ class SessionsFragment : Fragment() {
                     }
                     R.id.tvAdditionalSessions->{
 
-
-                            AdditionalSessionsPopupFragment().show(childFragmentManager,"AdditionalSessions")
-
+                        AdditionalSessionsPopupFragment().show(childFragmentManager,"AdditionalSessions")
 
                     }
 

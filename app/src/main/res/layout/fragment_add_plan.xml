@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:background="@drawable/ic_islamic_pattern"
     android:layout_height="match_parent"
-    tools:context=".activities.AddPlanActivity">
+    tools:context=".fragments.AddPlanFragment">
 
     <View
         android:id="@+id/view"
@@ -167,7 +167,7 @@
         android:fontFamily="@font/cairo_extra_bold"
         android:background="@drawable/bg_green_button"
         android:layout_marginHorizontal="@dimen/_28sdp"
-        app:layout_constraintBottom_toTopOf="@id/bnv"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -637,15 +637,6 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/bnv"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:menu="@menu/main_menu"
 
-            app:labelVisibilityMode="labeled"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

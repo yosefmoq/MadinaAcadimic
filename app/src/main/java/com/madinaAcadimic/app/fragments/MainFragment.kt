@@ -6,11 +6,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.view.get
-import com.madinaAcadimic.app.MainActivity
+import androidx.navigation.fragment.findNavController
 import com.madinaAcadimic.app.R
-import com.madinaAcadimic.app.activities.NotificationActivity
-import com.madinaAcadimic.app.activities.TeacherDetailsActivity
 import com.madinaAcadimic.app.activities.WalletActivity
 import com.madinaAcadimic.app.adapters.OnItemClickListener
 import com.madinaAcadimic.app.adapters.SimpleAdapter
@@ -37,7 +34,7 @@ class MainFragment : Fragment() {
         fragmentMainBinding.rvTeachers.adapter = SimpleAdapter(R.layout.item_teachers, onItemClickListener = object:
             OnItemClickListener {
             override fun onItemClick(position: Int) {
-                startActivity(Intent(requireContext(),TeacherDetailsActivity::class.java))
+                startActivity(Intent(requireContext(), TeacherDetailsFragment::class.java))
             }
 
             override fun onViewClicked(viewID: Int) {
@@ -45,14 +42,11 @@ class MainFragment : Fragment() {
 
         })
         fragmentMainBinding.tvAll.setOnClickListener {
-            MainActivity.activityMainBinding.vp.currentItem = 1
-            MainActivity.activityMainBinding.bnv.menu[1].isChecked = true
-
+            findNavController().navigate(R.id.action_navHome_to_navTeachers)
         }
-        fragmentMainBinding.tvAllPlans.setOnClickListener {
-            MainActivity.activityMainBinding.vp.currentItem = 2
-            MainActivity.activityMainBinding.bnv.menu[2].isChecked = true
 
+        fragmentMainBinding.tvAllPlans.setOnClickListener {
+            findNavController().navigate(R.id.action_navHome_to_navPlans)
         }
         fragmentMainBinding.tvRecharge.setOnClickListener {
             startActivity(Intent(requireContext(),WalletActivity::class.java))
@@ -63,7 +57,9 @@ class MainFragment : Fragment() {
         }
 
         fragmentMainBinding.ivNotification.setOnClickListener {
-            startActivity(Intent(requireContext(),NotificationActivity::class.java))
+
+            findNavController().navigate(R.id.action_navHome_to_notificationFragment)
+
         }
         fragmentMainBinding.rvPlans.adapter = SimpleAdapter(R.layout.item_save_plan, onItemClickListener = object :OnItemClickListener{
             override fun onItemClick(position: Int) {

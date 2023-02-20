@@ -1,35 +1,34 @@
-package com.madinaAcadimic.app.activities
+package com.madinaAcadimic.app.fragments
 
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup
 import android.widget.LinearLayout
-import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.res.ResourcesCompat
-import androidx.core.view.get
+import androidx.databinding.DataBindingUtil.setContentView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.google.android.material.tabs.TabLayoutMediator
-import com.madinaAcadimic.app.MainActivity
 import com.madinaAcadimic.app.R
-import com.madinaAcadimic.app.databinding.ActivityFinancialBinding
+import com.madinaAcadimic.app.databinding.FragmentFinancialBinding
 import com.madinaAcadimic.app.fragments.*
 
 
-class FinancialActivity : AppCompatActivity() {
+class FinancialFragment : Fragment() {
 
-    lateinit var binding: ActivityFinancialBinding
+    lateinit var binding: FragmentFinancialBinding
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
 
+        binding = FragmentFinancialBinding.inflate(layoutInflater,null,false)
 
-        binding = ActivityFinancialBinding.inflate(layoutInflater,null,false)
-        setContentView(binding.root)
-
-
-        binding.viewPager.adapter =  TabLayoutAdapter(this)
-
+        binding.viewPager.adapter =  TabLayoutAdapter(requireActivity())
 
         val root: View = binding.tabLayout.getChildAt(0)
 
@@ -49,41 +48,14 @@ class FinancialActivity : AppCompatActivity() {
                 else-> "Consumption"
             }
 
-
-
-
         }.attach()
         binding.tvSessionBack.setOnClickListener{
-            onBackPressed()
+            requireActivity().onBackPressed()
         }
 
-        binding.bnv.setOnItemSelectedListener {
-            finish()
-            when(it.itemId){
-                R.id.navHome->{
-                    MainActivity.activityMainBinding.vp.currentItem = 0
-                }
-                R.id.navTeachers->{
-                    MainActivity.activityMainBinding.vp.currentItem = 1
-                }
-                R.id.navPlans->{
-                    MainActivity.activityMainBinding.vp.currentItem = 2
-                }
-                R.id.navSessions->{
-                    MainActivity.activityMainBinding.vp.currentItem = 3
-                }
-                R.id.navAccount->{
-                    MainActivity.activityMainBinding.vp.currentItem = 4
-                }
-
-            }
-            true
-        }
-        binding.bnv.menu[4].isChecked = true
-
+        return binding.root
 
     }
-
 
     class TabLayoutAdapter(var fragmentActivity: FragmentActivity): FragmentStateAdapter(fragmentActivity){
         override fun getItemCount(): Int =

@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
 
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".activities.FinancialActivity">
+    tools:context=".fragments.FinancialFragment">
 
     <View
         android:id="@+id/view"
@@ -40,6 +40,8 @@
         app:tabSelectedTextColor="@color/primary_color"
         app:tabTextAppearance="@style/tab_text"
         app:tabTextColor="@color/sub_text_color"
+        app:tabPaddingStart="0dp"
+        app:tabPaddingEnd="0dp"
         app:tabIndicator="@drawable/custom_tab_indicator"
         app:layout_constraintTop_toBottomOf="@+id/view" >
 
@@ -73,20 +75,9 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="@dimen/_12sdp"
-        app:layout_constraintBottom_toTopOf="@id/bnv"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tabLayout"
         />
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bnv"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:menu="@menu/main_menu"
-
-        app:labelVisibilityMode="labeled"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
 
 
 

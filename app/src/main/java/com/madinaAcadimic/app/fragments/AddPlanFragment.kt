@@ -1,23 +1,27 @@
-package com.madinaAcadimic.app.activities
+package com.madinaAcadimic.app.fragments
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.view.View
-import androidx.core.view.get
-import com.madinaAcadimic.app.MainActivity
+import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import com.madinaAcadimic.app.R
 import com.madinaAcadimic.app.adapters.AddPlanAdapter
 import com.madinaAcadimic.app.adapters.PlanDetailsTypeOneAdapter
-import com.madinaAcadimic.app.databinding.ActivityAddPlanBinding
+import com.madinaAcadimic.app.databinding.FragmentAddPlanBinding
 
-class AddPlanActivity : AppCompatActivity() {
-    lateinit var activityAddPlanBinding: ActivityAddPlanBinding
+class AddPlanFragment : Fragment() {
+    lateinit var activityAddPlanBinding: FragmentAddPlanBinding
     var isEdit = false
     var currentStep = 1
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        activityAddPlanBinding = ActivityAddPlanBinding.inflate(layoutInflater,null,false)
-        setContentView(activityAddPlanBinding.root)
+
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
+
+        activityAddPlanBinding = FragmentAddPlanBinding.inflate(layoutInflater,null,false)
 
         val addPlanAdapter = AddPlanAdapter(3)
         activityAddPlanBinding.rvStep1.adapter = addPlanAdapter
@@ -31,7 +35,7 @@ class AddPlanActivity : AppCompatActivity() {
         activityAddPlanBinding.rvStep3.adapter = addPlanAdapter3
 
 
-        val planDetailsAdapter = PlanDetailsTypeOneAdapter(this@AddPlanActivity,2)
+        val planDetailsAdapter = PlanDetailsTypeOneAdapter(requireContext(),2)
         activityAddPlanBinding.rvDetailsTypeOne.adapter = planDetailsAdapter
 
 
@@ -48,19 +52,19 @@ class AddPlanActivity : AppCompatActivity() {
                 activityAddPlanBinding.clStep2.visibility = View.GONE
                 activityAddPlanBinding.clStep3.visibility = View.VISIBLE
                 activityAddPlanBinding.ivStep3.setImageResource(R.drawable.ic_check_active)
-                activityAddPlanBinding.vStep2.setBackgroundColor(getColor(R.color.primary_color))
+                activityAddPlanBinding.vStep2.setBackgroundColor(resources.getColor(R.color.primary_color))
             }else if(currentStep == 3){
                 currentStep = 4
                 activityAddPlanBinding.btnNext.text = getString(R.string.save_plan)
                 activityAddPlanBinding.clStep3.visibility = View.GONE
                 activityAddPlanBinding.clStep4.visibility = View.VISIBLE
                 activityAddPlanBinding.ivStep4.setImageResource(R.drawable.ic_check_active)
-                activityAddPlanBinding.vStep3.setBackgroundColor(getColor(R.color.primary_color))
+                activityAddPlanBinding.vStep3.setBackgroundColor(resources.getColor(R.color.primary_color))
             }
         }
         activityAddPlanBinding.tvPlans.setOnClickListener {
             if(currentStep == 1){
-                finish()
+                requireActivity().onBackPressed()
             }else if(currentStep == 2) {
                 currentStep = 1
                 activityAddPlanBinding.clStep1.visibility = View.VISIBLE
@@ -71,7 +75,7 @@ class AddPlanActivity : AppCompatActivity() {
                 activityAddPlanBinding.clStep2.visibility = View.VISIBLE
                 activityAddPlanBinding.clStep3.visibility = View.GONE
                 activityAddPlanBinding.ivStep3.setImageResource(R.drawable.ic_check_inactive)
-                activityAddPlanBinding.vStep2.setBackgroundColor(getColor(R.color.sub_text_color))
+                activityAddPlanBinding.vStep2.setBackgroundColor(resources.getColor(R.color.sub_text_color))
                 activityAddPlanBinding.btnNext.text = getString(R.string.naxt)
 
             }else if(currentStep == 4){
@@ -81,7 +85,7 @@ class AddPlanActivity : AppCompatActivity() {
                 activityAddPlanBinding.clStep3.visibility = View.VISIBLE
                 activityAddPlanBinding.clStep4.visibility = View.GONE
                 activityAddPlanBinding.ivStep4.setImageResource(R.drawable.ic_check_inactive)
-                activityAddPlanBinding.vStep3.setBackgroundColor(getColor(R.color.sub_text_color))
+                activityAddPlanBinding.vStep3.setBackgroundColor(resources.getColor(R.color.sub_text_color))
             }
         }
         activityAddPlanBinding.tvEdit.setOnClickListener {
@@ -94,30 +98,6 @@ class AddPlanActivity : AppCompatActivity() {
             planDetailsAdapter.notifyDataSetChanged()
         }
 
-        activityAddPlanBinding.bnv.setOnItemSelectedListener {
-            finish()
-            when(it.itemId){
-                R.id.navHome->{
-                    MainActivity.activityMainBinding.vp.currentItem = 0
-                }
-                R.id.navTeachers->{
-                    MainActivity.activityMainBinding.vp.currentItem = 1
-                }
-                R.id.navPlans->{
-                    MainActivity.activityMainBinding.vp.currentItem = 2
-                }
-                R.id.navSessions->{
-                    MainActivity.activityMainBinding.vp.currentItem = 3
-                }
-                R.id.navAccount->{
-                    MainActivity.activityMainBinding.vp.currentItem = 4
-                }
-
-            }
-            true
-        }
-        activityAddPlanBinding.bnv.menu[2].isChecked = true
-
-
+        return activityAddPlanBinding.root
     }
 }

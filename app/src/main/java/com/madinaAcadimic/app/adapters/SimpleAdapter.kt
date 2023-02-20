@@ -1,7 +1,6 @@
 package com.madinaAcadimic.app.adapters
 
 import android.content.Intent
-import android.media.Image
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,8 +11,7 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import antonkozyriatskyi.circularprogressindicator.CircularProgressIndicator
 import com.madinaAcadimic.app.R
-import com.madinaAcadimic.app.activities.TeacherDetailsActivity
-import org.w3c.dom.Text
+import com.madinaAcadimic.app.fragments.TeacherDetailsFragment
 
 class SimpleAdapter(var id:Int,var itemCountA:Int = 10,var onItemClickListener:OnItemClickListener=  object :OnItemClickListener{
 
@@ -80,7 +78,11 @@ class SimpleAdapter(var id:Int,var itemCountA:Int = 10,var onItemClickListener:O
         try {
             val tvTeachers = holder.view.findViewById<TextView>(R.id.tvTeacher)
             tvTeachers.setOnClickListener {
-                holder.view.context.startActivity(Intent(holder.view.context,TeacherDetailsActivity::class.java))
+
+                onItemClickListener.onViewClicked(it.id)
+
+//                holder.view.context.startActivity(Intent(holder.view.context,
+//                    TeacherDetailsFragment::class.java))
             }
         }catch (e:Exception){
 
