@@ -7,13 +7,13 @@
         android:shape="rectangle">
 
         <stroke
-            android:width="@dimen/_2sdp"
+            android:width="@dimen/_1sdp"
             android:color="@color/primary_color" />
 
 
 
         <corners android:radius="@dimen/_10sdp"/>
-        <size android:height="@dimen/_3sdp" />
+        <size android:height="@dimen/_2sdp" />
 
 
     </shape>

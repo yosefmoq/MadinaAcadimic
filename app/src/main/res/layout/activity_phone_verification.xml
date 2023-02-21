@@ -103,13 +103,21 @@
             android:textDirection="ltr"
 
             app:bar_enabled="true"
-            app:bar_height="1dp"
+            app:bar_height="3dp"
+
+            app:bar_margin_bottom="@dimen/_19sdp"
+            app:bar_margin_right="@dimen/_15sdp"
+            app:bar_margin_left="@dimen/_15sdp"
+            app:bar_inactive_color="@color/black"
+
+            app:bar_success_color="@color/box_background_color"
+
             app:height="@dimen/_40sdp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView8"
             app:length="4"
-            app:otp_box_background="@color/box_background_color"
+            app:otp_box_background="@drawable/bg_otp"
             app:otp_text_size="24dp"
             app:width="@dimen/_35sdp" />
 

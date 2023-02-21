@@ -62,6 +62,16 @@
                 app:layout_constraintTop_toTopOf="@+id/textView78"
                 app:srcCompat="@drawable/ic_new_progress" />
 
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="@string/up_to_plan"-->
+<!--                -->
+
+
+<!--                />-->
+
+
             <TextView
                 android:id="@+id/textView82"
                 android:layout_width="wrap_content"

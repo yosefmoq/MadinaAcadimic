@@ -35,6 +35,9 @@
         <action
             android:id="@+id/action_navPlans_to_addPlanFragment"
             app:destination="@id/addPlanFragment" />
+        <action
+            android:id="@+id/action_navPlans_to_planDetailsFragment"
+            app:destination="@id/planDetailsFragment" />
     </fragment>
     <fragment
         android:id="@+id/navSessions"
@@ -88,6 +91,11 @@
         android:name="com.madinaAcadimic.app.fragments.AddPlanFragment"
         android:label="fragment_add_plan"
         tools:layout="@layout/fragment_add_plan" />
+    <fragment
+        android:id="@+id/planDetailsFragment"
+        android:name="com.madinaAcadimic.app.fragments.PlanDetailsFragment"
+        android:label="fragment_plan_details"
+        tools:layout="@layout/fragment_plan_details" />
 
 
 </navigation>
