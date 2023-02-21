@@ -8,7 +8,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.madinaAcadimic.app.R
-import com.madinaAcadimic.app.activities.PlanDetailsActivity
 import com.madinaAcadimic.app.adapters.OnItemClickListener
 import com.madinaAcadimic.app.adapters.SimpleAdapter
 import com.madinaAcadimic.app.databinding.FragmentPlansBinding
@@ -28,7 +27,9 @@ class PlansFragment : Fragment() {
 
         fragmentPlansBinding.rvPlans.adapter = SimpleAdapter(R.layout.item_current_plans,6, onItemClickListener = object:OnItemClickListener{
             override fun onItemClick(position: Int) {
-                startActivity(Intent(requireContext(),PlanDetailsActivity::class.java))
+
+                findNavController().navigate(R.id.action_navPlans_to_planDetailsFragment)
+
             }
 
             override fun onViewClicked(viewID: Int) {

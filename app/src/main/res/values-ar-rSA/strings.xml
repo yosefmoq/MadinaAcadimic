@@ -229,5 +229,6 @@
     <string name="path">المسار</string>
     <string name="wednesday">الأربعاء</string>
     <string name="balance_after_recharge">رصيدك بعد الشحن</string>
+    <string name="edit_plan">تعديل الخطة</string>
 
 </resources>

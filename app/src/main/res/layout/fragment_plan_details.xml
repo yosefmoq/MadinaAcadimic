@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/ic_islamic_pattern"
-    tools:context=".activities.PlanDetailsActivity">
+    tools:context=".fragments.PlanDetailsFragment">
 
     <View
         android:id="@+id/view"
@@ -24,7 +24,7 @@
         android:drawablePadding="@dimen/_12sdp"
         android:fontFamily="@font/cairo_bold"
 
-        android:text="@string/plans"
+        android:text="@string/return_page"
         android:textColor="@color/black"
         android:textSize="@dimen/_14ssp"
         app:drawableStartCompat="@drawable/ic_left_arrow"
@@ -42,7 +42,7 @@
         android:drawableStart="@drawable/ic_edit_green"
         android:drawablePadding="6dp"
         android:fontFamily="@font/cairo_bold"
-        android:text="@string/edit"
+        android:text="@string/edit_plan"
         android:textColor="@color/primary_color"
         android:textSize="@dimen/_10ssp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -315,6 +315,7 @@
                         android:drawableStart="@drawable/ic_completed"
                         android:fontFamily="@font/cairo_bold"
                         android:gravity="center_horizontal"
+                        android:textSize="@dimen/_10ssp"
                         android:text="@string/completedA" />
 
                     <View
@@ -346,6 +347,7 @@
                         android:drawableStart="@drawable/ic_remaning"
                         android:fontFamily="@font/cairo_bold"
                         android:gravity="center_horizontal"
+                        android:textSize="@dimen/_10ssp"
 
                         android:text="@string/remaining" />
 
@@ -379,6 +381,7 @@
                         android:drawableStart="@drawable/ic_session"
                         android:fontFamily="@font/cairo_bold"
                         android:gravity="center_horizontal"
+                        android:textSize="@dimen/_10ssp"
 
                         android:text="@string/sessions" />
 
@@ -406,7 +409,8 @@
                     android:visibility="gone"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout3">
+                    android:layout_marginTop="@dimen/_10sdp"
+                    app:layout_constraintTop_toBottomOf="@+id/tabLayout">
 
                     <LinearLayout
                         android:id="@+id/llTypeSessions"
@@ -541,7 +545,8 @@
                     android:visibility="gone"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout3">
+                    android:layout_marginTop="@dimen/_10sdp"
+                    app:layout_constraintTop_toBottomOf="@+id/tabLayout">
 
                     <LinearLayout
                         android:id="@+id/llTypeCompleted"
@@ -669,72 +674,37 @@
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/constraintLayout3"
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tabLayout"
                     android:layout_width="0dp"
+                    app:layout_constraintWidth_percent="0.6"
                     android:layout_height="wrap_content"
-                    android:foregroundGravity="center_vertical"
-                    android:paddingBottom="@dimen/_8sdp"
-                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tabIndicator="@drawable/custom_tab_indicator"
+                    app:tabPaddingEnd="0dp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
+                    app:layout_constraintEnd_toEndOf="parent"
 
-                    <TextView
-                        android:id="@+id/textView79"
+                    app:tabPaddingStart="0dp"
+                    app:tabSelectedTextColor="@color/primary_color"
+                    app:tabTextAppearance="@style/tab_text"
+                    app:tabTextColor="@color/sub_text_color">
+
+
+                    <com.google.android.material.tabs.TabItem
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
-                        android:layout_marginEnd="@dimen/_24sdp"
-                        android:fontFamily="@font/cairo_bold"
-
                         android:text="@string/hijri"
-                        android:textColor="@color/primary_color"
-                        app:layout_constraintEnd_toEndOf="@+id/guideline3"
-                        app:layout_constraintTop_toTopOf="parent" />
 
-                    <View
-                        android:id="@+id/divider5"
-                        android:layout_width="0dp"
-                        android:layout_height="3dp"
-                        android:layout_marginStart="-10dp"
+                        />
 
-                        android:layout_marginTop="@dimen/_8sdp"
-                        android:layout_marginEnd="-10dp"
-                        android:background="@drawable/bg_green_button"
-                        app:layout_constraintEnd_toEndOf="@+id/textView79"
-                        app:layout_constraintStart_toStartOf="@+id/textView79"
-                        app:layout_constraintTop_toBottomOf="@+id/textView79" />
-
-                    <TextView
-                        android:id="@+id/textView80"
+                    <com.google.android.material.tabs.TabItem
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/_24sdp"
-                        android:layout_marginTop="4dp"
-                        android:fontFamily="@font/cairo_bold"
+                        android:text="@string/gregorian" />
 
-                        android:text="@string/gregorian"
-                        android:textColor="@color/sub_text_color"
-                        app:layout_constraintStart_toEndOf="@+id/guideline3"
-                        app:layout_constraintTop_toTopOf="parent" />
+                </com.google.android.material.tabs.TabLayout>
 
-                    <androidx.constraintlayout.widget.Guideline
-                        android:id="@+id/guideline3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        app:layout_constraintGuide_percent="0.5" />
-
-                    <View
-                        android:id="@+id/view2"
-                        android:layout_width="1dp"
-                        android:layout_height="@dimen/_13sdp"
-                        android:background="@color/sub_text_color"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toStartOf="@+id/guideline3"
-                        app:layout_constraintStart_toStartOf="@+id/guideline3"
-                        app:layout_constraintTop_toTopOf="parent" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/clRemaining"
@@ -743,7 +713,8 @@
                     android:visibility="gone"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout3">
+                    android:layout_marginTop="@dimen/_10sdp"
+                    app:layout_constraintTop_toBottomOf="@+id/tabLayout">
 
                     <LinearLayout
                         android:id="@+id/llTypeOne"
@@ -871,8 +842,9 @@
                     android:layout_height="wrap_content"
                     android:visibility="visible"
                     app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="@dimen/_10sdp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout3">
+                    app:layout_constraintTop_toBottomOf="@+id/tabLayout">
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/clTypeDetails"
