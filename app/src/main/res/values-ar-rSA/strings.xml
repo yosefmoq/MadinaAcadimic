@@ -229,5 +229,7 @@
     <string name="path">المسار</string>
     <string name="wednesday">الأربعاء</string>
     <string name="balance_after_recharge">رصيدك بعد الشحن</string>
+    <string name="students_age_category">Students age category</string>
+    <string name="_120_minutes">120 دقيقة</string>
 
 </resources>

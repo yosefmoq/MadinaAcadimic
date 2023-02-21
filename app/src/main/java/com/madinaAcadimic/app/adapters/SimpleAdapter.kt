@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import antonkozyriatskyi.circularprogressindicator.CircularProgressIndicator
@@ -25,6 +26,8 @@ class SimpleAdapter(var id:Int,var itemCountA:Int = 10,var onItemClickListener:O
 
 
 },var data:ArrayList<String> = arrayListOf()): RecyclerView.Adapter<SimpleAdapter.ViewHolder>() {
+    var selectedRadio = -1
+
     class ViewHolder(var view: View):RecyclerView.ViewHolder(view)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder =
@@ -43,6 +46,7 @@ class SimpleAdapter(var id:Int,var itemCountA:Int = 10,var onItemClickListener:O
                 textView.background = ContextCompat.getDrawable(holder.view.context,R.drawable.bg_text_gray)
             }
         }
+
 
         try {
             val progress = holder.view.findViewById<CircularProgressIndicator>(R.id.cpBalance)
@@ -65,8 +69,6 @@ class SimpleAdapter(var id:Int,var itemCountA:Int = 10,var onItemClickListener:O
         try {
 
             val viewDivider = holder.view.findViewById<View>(R.id.viewDivider)
-
-
             if (position == itemCountA - 1){
                 viewDivider.visibility = View.GONE
             }
@@ -84,10 +86,26 @@ class SimpleAdapter(var id:Int,var itemCountA:Int = 10,var onItemClickListener:O
 //                holder.view.context.startActivity(Intent(holder.view.context,
 //                    TeacherDetailsFragment::class.java))
             }
+
         }catch (e:Exception){
 
         }
 
+        try {
+            val iv = holder.view.findViewById<ImageView>(R.id.ivRadio)
+            val cl = holder.view.findViewById<ConstraintLayout>(R.id.clParentAA)
+            if(selectedRadio == position){
+                iv.setImageResource(R.drawable.ic_active_rb)
+            }else{
+                iv.setImageResource(R.drawable.ic_inactive_radio)
+            }
+            iv.setOnClickListener {
+                selectedRadio = position
+                notifyDataSetChanged()
+            }
+        }catch (e:Exception){
+
+        }
 
         try {
 
@@ -95,6 +113,7 @@ class SimpleAdapter(var id:Int,var itemCountA:Int = 10,var onItemClickListener:O
             val ivDetailsArrow = holder.view.findViewById<ImageView>(R.id.ivDetailsArrow)
             val llArrow = holder.view.findViewById<LinearLayout>(R.id.llArrow)
             val ivRecord = holder.view.findViewById<ImageView>(R.id.ivRecord)
+
 
 
             llArrow.setOnClickListener {

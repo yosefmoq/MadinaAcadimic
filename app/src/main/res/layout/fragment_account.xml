@@ -61,6 +61,7 @@
             android:layout_marginTop="8dp"
             android:background="@drawable/bg_add_account"
             android:drawablePadding="@dimen/_6sdp"
+            android:paddingEnd="@dimen/_21sdp"
             android:fontFamily="@font/cairo_medium"
             android:text="@string/add_account"
             android:textColor="@color/darker_green_color"
@@ -107,7 +108,7 @@
             android:id="@+id/tvChangeAccount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_14sdp"
             android:background="@drawable/bg_text_darker_green"
             android:drawablePadding="@dimen/_6sdp"
             android:fontFamily="@font/cairo_medium"
@@ -232,7 +233,7 @@
         app:layout_constraintTop_toTopOf="@+id/tvName3">
 
         <TextView
-            android:id="@+id/textView58"
+            android:id="@+id/tvArabic"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
@@ -249,14 +250,17 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/textView59"
+            android:id="@+id/tvEnglish"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
             android:layout_marginEnd="8dp"
             android:text="English"
+            android:paddingHorizontal="@dimen/_6sdp"
+            android:paddingVertical="@dimen/_2sdp"
+
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/textView58"
+            app:layout_constraintEnd_toStartOf="@+id/tvArabic"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -265,6 +269,8 @@
         android:id="@+id/switch1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        app:track="@drawable/custom_track"
+        android:thumb="@drawable/custom_thumb"
 
         android:checked="true"
         app:layout_constraintBottom_toBottomOf="@+id/tvName4"
@@ -329,7 +335,7 @@
         android:layout_width="0dp"
         android:layout_height="1dp"
         android:layout_marginTop="@dimen/_6sdp"
-        android:background="?android:attr/listDivider"
+        android:background="#BAC5D9"
         app:layout_constraintEnd_toEndOf="@+id/tvName7"
         app:layout_constraintStart_toStartOf="@+id/tvName7"
         app:layout_constraintTop_toBottomOf="@+id/tvName7" />

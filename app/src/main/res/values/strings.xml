@@ -89,7 +89,7 @@
     <string name="confirm">Confirm</string>
     <string name="cancel">Cancel</string>
     <string name="lastname">Last Name</string>
-    <string name="sex">Sex:</string>
+    <string name="sex">Gender:</string>
     <string name="confirm_edits">Confirm Changes</string>
     <string name="are_you_sure_changes">Are you sure to change Profile\nInformations ?</string>
     <string name="no_plans_yet">You have no plans yet</string>
@@ -229,6 +229,8 @@
     <string name="programs">Programs</string>
     <string name="path">Path</string>
     <string name="balance_after_recharge">Balance after recharge</string>
+    <string name="students_age_category">Students age category</string>
+    <string name="_120_minutes">120 Minutes</string>
 
 
 </resources>

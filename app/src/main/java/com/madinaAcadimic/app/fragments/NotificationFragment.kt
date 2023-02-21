@@ -42,9 +42,9 @@ class NotificationFragment : Fragment() {
             true
         )
 
-        val nd1 = NotificationData(getString(R.string.today), listOf(n1))
-        val nd2 = NotificationData(getString(R.string.yesterday), listOf(n2,n3))
-        val nd3 = NotificationData(getString(R.string.test_date), listOf(n4))
+        val nd1 = NotificationData(getString(R.string.today), arrayListOf(n1))
+        val nd2 = NotificationData(getString(R.string.yesterday), arrayListOf(n2,n3))
+        val nd3 = NotificationData(getString(R.string.test_date), arrayListOf(n4))
 
         val notificationData = listOf(nd1,nd2,nd3)
         notificationDataAdapter = NotificationDataAdapter(requireContext(),notificationData)

@@ -47,13 +47,6 @@ class ChangePasswordActivity : AppCompatActivity() {
             finish()
         }
 
-        activityChangePasswordBinding.ivShowPassword.setOnClickListener {
-            activityChangePasswordBinding.etNewPassword.inputType =
-                InputType.TYPE_CLASS_TEXT
-        }
-        activityChangePasswordBinding.ivShowPasswordConfirm.setOnClickListener {
-            activityChangePasswordBinding.etConfirmPassword.inputType =
-                InputType.TYPE_CLASS_TEXT
-        }
+
     }
 }

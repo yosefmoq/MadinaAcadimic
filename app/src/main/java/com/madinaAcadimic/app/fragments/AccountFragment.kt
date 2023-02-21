@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.bottomsheet.BottomSheetDialog
@@ -41,7 +42,7 @@ class AccountFragment : Fragment() {
             findNavController().navigate(R.id.action_navAccount_to_accountInformationFragment)
         }
         fragmentAccountBinding.tvStatistics.setOnClickListener {
-            findNavController().navigate(R.id.action_navAccount_to_accountInformationFragment)
+            findNavController().navigate(R.id.action_navAccount_to_statisticsActivity)
         }
 
         fragmentAccountBinding.tvName7.setOnClickListener {
@@ -50,6 +51,19 @@ class AccountFragment : Fragment() {
 
         fragmentAccountBinding.tvChangePassword.setOnClickListener {
             startActivity(Intent(requireContext(),ChangePasswordActivity::class.java))
+        }
+
+        fragmentAccountBinding.tvArabic.setOnClickListener {
+            fragmentAccountBinding.tvArabic.background = ContextCompat.getDrawable(requireContext(),R.drawable.bg_green_button)
+            fragmentAccountBinding.tvEnglish.background = null
+            fragmentAccountBinding.tvEnglish.setTextColor(resources.getColor(R.color.sub_text_color))
+            fragmentAccountBinding.tvArabic.setTextColor(resources.getColor(R.color.white))
+        }
+        fragmentAccountBinding.tvEnglish.setOnClickListener {
+            fragmentAccountBinding.tvEnglish.background = ContextCompat.getDrawable(requireContext(),R.drawable.bg_green_button)
+            fragmentAccountBinding.tvArabic.background = null
+            fragmentAccountBinding.tvArabic.setTextColor(resources.getColor(R.color.sub_text_color))
+            fragmentAccountBinding.tvEnglish.setTextColor(resources.getColor(R.color.white))
         }
 
     }

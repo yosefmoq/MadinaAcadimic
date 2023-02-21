@@ -75,6 +75,7 @@ class StatisticsFragment : Fragment() {
 
 
 
+/*
         binding.cvAll.setOnClickListener {
             showDailyAllDialog()
         }
@@ -83,6 +84,7 @@ class StatisticsFragment : Fragment() {
         binding.cvToday.setOnClickListener {
             showDailyAllDialog()
         }
+*/
 
 
         binding.cvMonth.setOnClickListener {

@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
         activityMainBinding = ActivityMainBinding.inflate(layoutInflater,null,false)
         setContentView(activityMainBinding.root)
 
-//        userType = intent.getStringExtra(Constants.USER_TYPE)!! Todo remove comment
+        userType = intent.getStringExtra(Constants.USER_TYPE)!!
 
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         val navController = navHostFragment.navController
