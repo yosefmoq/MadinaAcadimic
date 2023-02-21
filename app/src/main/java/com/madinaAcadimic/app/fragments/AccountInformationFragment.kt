@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.Window
 import android.widget.ArrayAdapter
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.madinaAcadimic.app.MainActivity
 import com.madinaAcadimic.app.R
@@ -58,6 +59,7 @@ class AccountInformationFragment : Fragment() {
                 binding.tvAllInfo.visibility = View.VISIBLE
                 binding.llSex.visibility = View.GONE
                 binding.tvMale.visibility = View.VISIBLE
+                binding.etOrgnization.background = ContextCompat.getDrawable(requireContext(),R.drawable.bg_edit_text_regular)
 
                 binding.etFirstName.isEnabled = false
                 binding.etLastName.isEnabled = false
@@ -67,6 +69,9 @@ class AccountInformationFragment : Fragment() {
                 binding.etAgeCategory.isEnabled = false
                 binding.etPreferedRewaya.isEnabled = false
                 binding.etLearningLanguage.isEnabled = false
+                binding.ivBottomAge.visibility = View.GONE
+                binding.ivBottomRiwayah.visibility = View.GONE
+                binding.ivLearningLanguage.visibility = View.GONE
 
                 dialog.hide()
             }
@@ -102,17 +107,28 @@ class AccountInformationFragment : Fragment() {
             binding.button.visibility = View.VISIBLE
             binding.tvEdit.visibility = View.GONE
             binding.tvAllInfo.visibility = View.GONE
-            binding.etFirstName.isEnabled = true
-            binding.etLastName.isEnabled = true
-            binding.etEmail.isEnabled = true
+            binding.etFirstName.isEnabled = MainActivity.userType == Constants.USER
+            binding.etLastName.isEnabled = MainActivity.userType == Constants.USER
+            binding.etEmail.isEnabled = MainActivity.userType == Constants.USER
             binding.etPhoneNumber.editTextTextPersonName.isEnabled =
                 MainActivity.userType == Constants.USER
-            binding.etOrgnization.isEnabled = true
+            binding.etOrgnization.isEnabled = false
             binding.etAgeCategory.isEnabled = true
             binding.etPreferedRewaya.isEnabled = true
             binding.etLearningLanguage.isEnabled = true
-            binding.llSex.visibility = View.VISIBLE
-            binding.tvMale.visibility = View.GONE
+            if(MainActivity.userType == Constants.USER) {
+                binding.llSex.visibility = View.VISIBLE
+                binding.tvMale.visibility = View.GONE
+            }else{
+                binding.etFirstName.background = ContextCompat.getDrawable(requireContext(),R.drawable.bg_edit_text_regular2)
+                binding.etLastName.background = ContextCompat.getDrawable(requireContext(),R.drawable.bg_edit_text_regular2)
+                binding.etEmail.background = ContextCompat.getDrawable(requireContext(),R.drawable.bg_edit_text_regular2)
+
+            }
+            binding.etOrgnization.background = ContextCompat.getDrawable(requireContext(),R.drawable.bg_edit_text_regular2)
+            binding.ivBottomAge.visibility = View.VISIBLE
+            binding.ivBottomRiwayah.visibility = View.VISIBLE
+            binding.ivLearningLanguage.visibility = View.VISIBLE
 
         }
 

@@ -48,7 +48,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/_20sdp"
-        android:drawableStart="@drawable/ic_edit_green"
+        android:drawableEnd="@drawable/ic_edit_green"
         android:drawablePadding="@dimen/_4sdp"
         android:fontFamily="@font/cairo_bold"
         android:text="@string/edit"
@@ -181,8 +181,6 @@
                 android:drawablePadding="@dimen/_9sdp"
                 android:ems="10"
                 android:enabled="false"
-
-                android:drawableEnd="@drawable/ic_bottom_arrow"
                 android:focusable="false"
                 android:clickable="true"
                 android:fontFamily="@font/cairo_medium"
@@ -217,7 +215,6 @@
                 android:ems="10"
                 android:enabled="false"
 
-                android:drawableEnd="@drawable/ic_bottom_arrow"
                 android:focusable="false"
                 android:clickable="true"
                 android:fontFamily="@font/cairo_medium"
@@ -329,7 +326,6 @@
                 android:layout_width="0dp"
                 android:layout_height="@dimen/_37sdp"
                 android:layout_marginTop="8dp"
-                android:drawableEnd="@drawable/ic_bottom_arrow"
                 android:background="@drawable/bg_edit_text_regular"
                 android:drawableStart="@drawable/ic_quraan"
                 android:drawablePadding="@dimen/_9sdp"
@@ -429,6 +425,40 @@
                     app:layout_constraintTop_toBottomOf="@+id/etLearningLanguage" />
 
             </LinearLayout>
+
+            <ImageView
+                android:id="@+id/ivBottomAge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:visibility="gone"
+
+                app:layout_constraintBottom_toBottomOf="@+id/etAgeCategory"
+                app:layout_constraintEnd_toEndOf="@+id/etAgeCategory"
+                app:layout_constraintTop_toTopOf="@+id/etAgeCategory"
+                app:srcCompat="@drawable/ic_bottom_arrow" />
+
+            <ImageView
+                android:id="@+id/ivBottomRiwayah"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/etPreferedRewaya"
+                app:layout_constraintEnd_toEndOf="@+id/etPreferedRewaya"
+                app:layout_constraintTop_toTopOf="@+id/etPreferedRewaya"
+                app:srcCompat="@drawable/ic_bottom_arrow" />
+
+            <ImageView
+                android:id="@+id/ivLearningLanguage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/etLearningLanguage"
+                app:layout_constraintEnd_toEndOf="@+id/etLearningLanguage"
+                app:layout_constraintTop_toTopOf="@+id/etLearningLanguage"
+                app:srcCompat="@drawable/ic_bottom_arrow" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

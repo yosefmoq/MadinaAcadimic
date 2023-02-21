@@ -9,12 +9,14 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil.setContentView
 import androidx.fragment.app.Fragment
+import com.madinaAcadimic.app.R
 import com.madinaAcadimic.app.databinding.FragmentTeacherDetailsBinding
 
 class TeacherDetailsFragment : Fragment() {
 
     lateinit var activityTeacherDetailsBinding: FragmentTeacherDetailsBinding
 
+    var isFav = false
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -40,6 +42,17 @@ class TeacherDetailsFragment : Fragment() {
         }
         activityTeacherDetailsBinding.tvPlans.setOnClickListener {
             requireActivity().onBackPressed()
+        }
+
+        activityTeacherDetailsBinding.ivFav.setOnClickListener {
+            isFav = !isFav
+
+            if(isFav){
+                activityTeacherDetailsBinding.ivFav.setImageResource(R.drawable.ic_fac_fill)
+            }else{
+                activityTeacherDetailsBinding.ivFav.setImageResource(R.drawable.ic_favorite_wborder)
+
+            }
         }
 
         return activityTeacherDetailsBinding.root

@@ -226,6 +226,7 @@
                 android:layout_marginTop="16dp"
                 android:background="@drawable/bg_green_button"
                 android:text="@string/show_results"
+                android:textAllCaps="false"
                 android:textColor="@color/white"
                 app:layout_constraintEnd_toEndOf="@+id/rangeSeekBar"
                 app:layout_constraintStart_toStartOf="@+id/rangeSeekBar"
